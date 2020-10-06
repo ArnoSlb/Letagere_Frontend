@@ -1,0 +1,13 @@
+@use 'src/styles/vars';
+.error {
+  text-align: center;
+  font-size: 60px;
+  color: vars.$color-green;
+  font-weight: bold;
+  height: calc(100vh-139px);
+
+  h1 {
+    position: relative;
+    top: 40%;
+  }
+}

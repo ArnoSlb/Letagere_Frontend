@@ -1,0 +1,49 @@
+@use 'src/styles/vars';
+
+.nouscontacter {
+
+ .cardsid{
+  display: flex;
+  height: 370px;
+  width: 80%;
+  justify-content: space-evenly;
+  margin: 200px auto;
+  margin-bottom: 555px;
+ }
+  .cardid {
+    background-color: white;
+    width: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  img {
+    border-radius: 200px;
+    margin-bottom: vars.$gutter;
+    margin-top: vars.$gutter*2;
+    width: 150px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: grey;
+    font-size: .9em;
+    margin-top: vars.$gutter*.2;
+  }
+
+  p {
+    margin-top: vars.$gutter*.5;
+    margin-bottom: vars.$gutter;
+
+  }
+
+}
+
+.cardid__poste {
+  margin: vars.$gutter;
+}

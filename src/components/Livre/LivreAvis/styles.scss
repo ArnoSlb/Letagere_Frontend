@@ -1,0 +1,74 @@
+@use 'src/styles/vars';
+
+.livreavis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 .5em;
+    width: 100%;
+    background-color: white;
+    border: solid 1px vars.$color-blackgrey;
+    border-radius: 8px;
+    margin-bottom: vars.$gutter*.5;
+
+    &__user {
+      display: flex;
+      justify-content: space-between;
+
+      &__infos {
+        display: flex;
+        margin: vars.$gutter*.5 vars.$gutter*.25;
+
+        &__profilepic {
+          width: 40px;
+        border-radius: 40px;
+        border: solid 1px vars.$color-blackgrey;
+        
+
+        }
+
+        &__details {
+
+          display: flex;
+          flex-direction: column;
+          margin-left: vars.$gutter*.4;
+          justify-content: center;
+          
+          &__name {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: .9em;
+        }
+
+          &__city {
+          color: vars.$color-grey;
+          font-size: .8em;
+        }
+
+        }
+      }
+
+      &__rating {
+
+        img {
+          height: 18px;
+          margin-top: 18px;
+          margin-right: vars.$gutter;
+        }
+
+        p {
+          margin-top: 18px;
+          margin-right: vars.$gutter;
+        }
+      }
+    }
+
+
+    &__texte {
+      p {
+        font-size: .9em;
+        margin: vars.$gutter*.35 vars.$gutter*.4 vars.$gutter;
+        line-height: 1.2em;
+      }
+    }
+}

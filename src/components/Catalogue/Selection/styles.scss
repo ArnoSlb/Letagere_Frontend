@@ -1,0 +1,36 @@
+@use 'src/styles/vars';
+
+.selection {
+  height: 330px;
+
+  &__frame {
+    margin: 1em 0;
+    border: solid 1px vars.$color-blackgrey;
+    border-radius: 14px;
+    position: absolute;
+    width: 80%;
+    max-width: 1500px;
+    height: 250px;
+
+    &__title {
+      background: vars.$color-green;
+      display: inline-block;
+      padding: vars.$gutter*.5 vars.$gutter;
+      border-radius: 5px;
+      position: relative;
+      top: -18px;
+      left: -16px;
+      text-transform: uppercase;
+      color: vars.$color-white;
+      font-weight: 500;
+      font-size: .9em;
+    }
+
+    &__position {
+      display: flex;
+      justify-content: flex-start;
+      overflow-x: scroll;
+    }
+  }
+  
+}

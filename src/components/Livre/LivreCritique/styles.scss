@@ -1,0 +1,95 @@
+@use 'src/styles/vars';
+
+.livrecritique {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 .5em;
+    width: 100%;
+    background-color: white;
+    border: solid 1px vars.$color-blackgrey;
+    border-radius: 8px;
+    margin-bottom: vars.$gutter*.5;
+
+    &__user {
+      display: flex;
+      justify-content: space-between;
+
+      &__infos {
+        display: flex;
+        margin: vars.$gutter*.5 vars.$gutter*.25;
+
+        &__profilepic {
+          width: 40px;
+          height: 40px;
+        border-radius: 40px;
+        border: solid 1px vars.$color-blackgrey;
+        
+
+        }
+
+        &__details {
+
+          display: flex;
+          flex-direction: column;
+          margin-left: vars.$gutter*.4;
+          justify-content: center;
+          
+          &__name {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: .9em;
+        }
+
+          &__city {
+          color: vars.$color-grey;
+          font-size: .8em;
+        }
+
+        }
+      }
+
+      &__rating {
+        p {
+          border: solid 3px vars.$color-green;
+          color: vars.$color-green;
+          padding: 5px 10px;
+          height: 40px;
+          border-radius: 20px;
+          margin: vars.$gutter*.8;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+
+    &__texte {
+
+      height: 100px;
+      overflow: hidden;
+      p {
+        font-size: .9em;
+        margin: vars.$gutter*.35 vars.$gutter*.4 0;
+        line-height: 1.2em; 
+      }
+      h1 {
+        font-weight: 500;
+        margin: 0 vars.$gutter*.4 0;
+        line-height: 1.2em; 
+      }
+    }
+
+    &__lien {
+      text-align: right;
+      padding: vars.$gutter;
+      font-weight: bold;
+      font-size: .8em;
+    }
+}
+
+@media screen and (max-width:1280px) {
+  .livrecritique {
+    width: 98%;
+}
+}

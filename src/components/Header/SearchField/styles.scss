@@ -1,0 +1,42 @@
+@use 'src/styles/vars';
+
+
+.searchfield {
+  margin-top: vars.$gutter * .3;
+  opacity: .5;
+  
+
+
+  &__input {
+    padding: vars.$gutter * .2 vars.$gutter * .4;
+    border: 1px solid vars.$color_blackgrey;
+    border-radius: 3px;
+    width: vars.$gutter * 20;
+    height: vars.$gutter * 2;
+    
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .searchfield {
+  
+    &__input {
+      width: vars.$gutter * 10;
+     
+      
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchfield {
+    width: 80%;
+    margin-top: vars.$gutter;
+
+    &__input {
+      
+     width: 100%;
+      
+    }
+  }
+}

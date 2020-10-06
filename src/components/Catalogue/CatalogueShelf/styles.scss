@@ -1,0 +1,74 @@
+@use 'src/styles/vars';
+
+.catalogueshelf {
+  // margin-left: vars.$gutter*1.5;
+  width: 100%;
+  text-align: left;
+  perspective: 500px;
+  position: relative;
+  top: -100px;
+  height: 55px;
+  left: -1%;
+
+  // &__shelf{
+  //   height: 100px;
+  //   max-width: 1146.5px;
+  //   width: 110%;
+  //   background: linear-gradient(vars.$color-darkgreen, vars.$color-lightgreen);
+  //   margin: vars.$gutter * 10 auto 0;
+  //   transform: rotateX(40deg);
+  //   border: black solid 2px;
+  //   position: relative;
+  //   top: 45px;
+  //   left: 4px;
+
+  // }
+
+  // &__shelfbottom {
+  //   height: 10px;
+  //   max-width: 1225px;
+  //   width: 100%;
+  //   background-color: vars.$color-lightgreen;
+  //   border: black solid 1px;
+  //   position: relative;
+  //   top: 39px;
+
+    
+  // }
+
+  &__shelf{
+    height: 100px;
+    width: 92.6%;
+    background: linear-gradient(vars.$color-darkgreen, vars.$color-lightgreen);
+    margin: vars.$gutter * 10 auto 0;
+    transform: rotateX(50deg);
+    border: black solid 2px;
+    position: relative;
+    top: 45px;
+    
+
+  }
+
+  &__shelfbottom {
+    height: 10px;
+    width: 100%;
+    background-color: vars.$color-lightgreen;
+    border: black solid 1px;
+    position: relative;
+    top: 34px;
+  } 
+}
+
+@media screen and (max-width:1280px) {
+  .catalogueshelf {
+    height:750px;
+    &__shelf {
+      display:none;
+    }
+    &__shelfbottom {
+      display:none;
+    }
+  
+  }
+}
+

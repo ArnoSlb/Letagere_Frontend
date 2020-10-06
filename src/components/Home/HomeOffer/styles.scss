@@ -1,0 +1,67 @@
+@use 'src/styles/vars';
+
+.home_offer {
+  text-align: left;
+  perspective: 500px;
+  position: relative;
+  top: -100px;
+  max-width: 1500px;
+  margin: auto;
+  height: 320px;
+
+  &__title {
+    background-color: vars.$color-green;
+    color: vars.$color-white;
+    padding: vars.$gutter * .6 vars.$gutter;
+    border-radius: 6px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: absolute;
+    
+  }
+
+  &__shelf{
+    height: 100px;
+    width: 90%;
+    background: linear-gradient(vars.$color-darkgreen, vars.$color-lightgreen);
+    margin: vars.$gutter * 10 auto 0;
+    transform: rotateX(50deg);
+    border: black solid 2px;
+    position: relative;
+    top: 230px;
+
+  }
+
+  &__shelfbottom {
+    height: 20px;
+    width: 97.1%;
+    background-color: vars.$color-lightgreen;
+    border: black solid 1px;
+    position: relative;
+    top: 223px;
+    left:1.5%;
+    
+  }
+
+  &__books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: scroll;
+    margin: 0 5em;
+    margin-left: 6%;
+    position: relative;
+    top: -50px;
+    width: 87%;
+    height: 252px;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home_offer__title {
+    font-size: .8em;
+
+  }
+
+}

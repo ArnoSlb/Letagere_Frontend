@@ -1,0 +1,78 @@
+@use 'src/styles/vars';
+
+.bookshelf {
+  display: flex;
+  padding: vars.$gutter*.3 0 vars.$gutter*1.4;
+  margin: 0 vars.$gutter*.68 29px;
+  margin-right: 29px;
+  perspective: 150px;
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 150px;
+    height: 158.5px;
+
+    &__cover {
+      height: 120px;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: vars.$gutter*.3 0;
+      font-size: .9em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__author {
+      color: vars.$color-grey;
+      font-size: .8em;
+      font-weight: 500;
+    }
+
+    &__rating {
+      margin: vars.$gutter*.3;
+      
+      &__point {
+        width: 20px;
+      }
+    }
+    
+    
+  }
+  
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2em;
+    position: absolute;
+    
+    &__heart {
+      width: 15px;
+      position: relative;
+      left: 120px;
+    }
+    
+    &__plus {
+      width: 15px;
+      position: relative;
+      left: 120px;
+    }
+  }
+  
+      &__link {
+        max-width: 100px;
+        display: flex;
+        align-self: center;
+      }
+}
+
+@media screen and (max-width:768px) {
+  .bookshelf {
+    margin-left: 18%;
+  }
+}

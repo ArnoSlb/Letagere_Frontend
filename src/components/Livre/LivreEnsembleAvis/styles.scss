@@ -1,0 +1,243 @@
+@use 'src/styles/vars';
+
+.livreensemble {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+
+  &__avis {
+    margin-top: vars.$gutter;
+    border: solid 1px vars.$color-blackgrey;
+    border-radius: 14px;
+    padding-bottom: vars.$gutter;
+    width: 85.5%;
+
+    &__title {
+      background: vars.$color-green;
+      display: inline-block;
+      padding: vars.$gutter*.5 vars.$gutter;
+      border-radius: 5px;
+      position: relative;
+      top: -18px;
+      left: -16px;
+      text-transform: uppercase;
+      color: vars.$color-white;
+      font-weight: 500;
+      font-size: .9em;
+    }
+
+    &__position {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &__avis {
+        max-height: 404px;
+        overflow-y: scroll;
+        width: 90%;
+        align-self: center;
+      }
+    
+
+      &__formulaire {
+
+        margin: vars.$gutter 0;
+        background-color: vars.$color-blackgrey;
+        border: vars.$color-blackgrey solid 1px;
+        border-radius: 8px;
+        padding: vars.$gutter vars.$gutter*2;
+        width: 90%;
+        
+        &__elements {
+
+          display: flex;
+          justify-content: space-between;
+
+          &__msg {
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+                        
+            &__textarea {
+              border-radius: 5px;
+              border: none;
+              font-size: .9em;
+              align-self: center;
+
+            }
+
+            &__button {
+              background-color: vars.$color-darkgreen;
+              height: 30px;
+              border: none;
+              padding: 0 10px;
+              border-radius: 8px;
+              margin-top: 10px;
+              color: vars.$color-blackgrey;
+              font-family: 'Raleway', sans-serif;
+              font-weight: 500;
+              display: block;
+              margin: vars.$gutter auto 0;
+              transition: 0.3s;
+              &:hover {
+                color: vars.$color-white;
+                background-color: vars.$color-green;
+              }
+            }
+          }
+          
+        }
+            .rating__books {
+              max-width: 20px;
+              height: 20px;
+              margin-top: vars.$gutter;
+              cursor: pointer;
+            
+  
+              &-container {
+                display: flex;
+              }
+
+            }
+            
+            
+             .rating__input {
+              display: none;
+            } 
+      }
+    }
+  }
+
+  &__critiques {
+    margin-top: vars.$gutter*3.18;
+    border: solid 1px vars.$color-blackgrey;
+    border-radius: 14px;
+    padding-bottom: vars.$gutter;
+    width: 85.5%;
+    margin-bottom: vars.$gutter*2;
+
+    &__title {
+      background: vars.$color-green;
+      display: inline-block;
+      padding: vars.$gutter*.5 vars.$gutter;
+      border-radius: 5px;
+      position: relative;
+      top: -18px;
+      left: -16px;
+      text-transform: uppercase;
+      color: vars.$color-white;
+      font-weight: 500;
+      font-size: .9em;
+    }
+
+    &__position {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &__avis {
+        max-height: 477px;
+        overflow-y: scroll;
+        width: 90%;
+        align-self: center;
+
+        p {
+          padding-bottom: vars.$gutter*.2;
+        }
+      }
+    
+
+      &__formulaire {
+
+        margin: vars.$gutter*1.5 0 vars.$gutter;
+        background-color: vars.$color-green;
+        border: vars.$color-blackgrey solid 1px;
+        border-radius: 8px;
+        
+        &__elements {
+
+          button {
+            background-color: vars.$color-green;
+            padding: vars.$gutter*.5 vars.$gutter;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width:1280px) {
+  .livreensemble {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__avis {
+      width: 48%;
+      margin-top: 0;
+  }
+
+  &__critiques {
+    width: 48%;
+    margin-top: 0;
+  }
+ }
+}
+
+@media screen and (max-width:1024px) {
+  .livreensemble {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__avis {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom:40px;
+  }
+
+  &__critiques {
+    width: 100%;
+    margin-top: 0;
+  }
+ }
+}
+
+@media screen and (max-width:768px) {
+  .livreensemble__avis__title{
+    font-size: .8em;
+    padding: vars.$gutter*.5 vars.$gutter*.3;
+    left: 0;
+  }
+
+  .livreensemble__critiques__title {
+    font-size: .8em;
+    padding: vars.$gutter*.5 vars.$gutter*.3;
+    left: 0;
+  }
+
+  .livreensemble__avis__position {
+    width: 350px;
+  }
+
+  .livreensemble__avis__position__formulaire__elements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .livreensemble__avis__position__formulaire__elements__msg__textarea {
+    width: 250px;
+  }
+
+}

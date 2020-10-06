@@ -1,0 +1,58 @@
+@use 'src/styles/vars';
+
+.catalogue {
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  &__miseenpage {
+    display: flex;
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+}
+
+.loader {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: vars.$gutter;
+  margin-top: vars.$gutter*4;
+  margin-bottom: vars.$gutter*4;
+
+  h1{
+    text-transform: uppercase;
+    margin-bottom: vars.$gutter;
+  }
+}
+
+@media screen and (max-width:1280px) {
+  .catalogue {
+    &__miseenpage {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+  
+  }
+
+  .loader {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: vars.$gutter;
+    margin-top: vars.$gutter*4;
+    margin-bottom: vars.$gutter*4;
+
+    h1{
+      text-transform: uppercase;
+      margin-bottom: vars.$gutter;
+    }
+
+  }
+}
+

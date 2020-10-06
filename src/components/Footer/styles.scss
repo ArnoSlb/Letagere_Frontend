@@ -1,0 +1,76 @@
+@use 'src/styles/vars';
+
+
+.footer {
+  background-color: vars.$color-green;
+  color: vars.$color-white;
+  justify-content: space-between;
+  padding: vars.$gutter * 1;
+  font-weight: 500;
+  width: 100%;
+  
+  &__container {
+    width: 80%;
+    max-width: 1500px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+  &__ul {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__link {
+    margin-right: vars.$gutter * 2.5;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: vars.$gutter * 1 vars.$gutter * .5;
+    font-size: .8em;
+
+    
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer{
+
+    &__container {
+    flex-direction: column-reverse;
+    width: 100vw;
+    }
+
+    &__copyright {
+     margin-top: .8em;
+     text-align: center;
+      
+    }
+
+    &__ul {
+      justify-content: space-around;
+    }
+
+}
+  
+}
+
+@media screen and (max-width: 768px) {
+  .footer{
+    width: 100vw;
+    
+    &__ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__li {
+    margin: .2em;
+  }
+}
+  
+}

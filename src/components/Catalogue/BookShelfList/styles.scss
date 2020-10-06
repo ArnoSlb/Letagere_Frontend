@@ -1,0 +1,27 @@
+@use 'src/styles/vars';
+
+.bookshelflist {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: -1275px;
+  margin-left: vars.$gutter*2;
+}
+
+@media screen and (max-width:1280px) {
+  .bookshelflist {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 640px;
+    margin-left: vars.$gutter*2;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .bookshelflist {
+    margin-top: 0;
+    overflow-y: scroll;
+    height: 4480px;
+  }
+}

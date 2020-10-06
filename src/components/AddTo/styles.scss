@@ -1,0 +1,57 @@
+@use 'src/styles/vars';
+
+
+
+#add_library_message {
+  display: none;
+  color: vars.$color-white;
+  font-size: vars.$gutter * 1.2;
+  font-weight: 450;
+  position: fixed;
+  right: 30px;
+  top: 120px;
+  background-color: vars.$color-green;
+  padding: vars.$gutter * .5;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#add_wishlist_message {
+  display: none;
+  color: vars.$color-white;
+  font-size: vars.$gutter * 1.2;
+  font-weight: 450;
+  position: fixed;
+  right: 30px;
+  background-color: vars.$color-green;
+  padding: vars.$gutter * .5;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#add_library_message_error {
+  display: none;
+  color: vars.$color-white;
+  font-size: vars.$gutter * 1.2;
+  font-weight: 450;
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  background-color: vars.$color-lightred;
+  padding: vars.$gutter * .5;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#add_wishlist_message_error {
+  display: none;
+  color: vars.$color-white;
+  font-size: vars.$gutter * 1.2;
+  font-weight: 450;
+  position: absolute;
+  right: 30px;
+  background-color: vars.$color-red;
+  padding: vars.$gutter * .5;
+  z-index: 1;
+  border-radius: 10px;
+}

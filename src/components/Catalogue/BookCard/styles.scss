@@ -1,0 +1,61 @@
+@use 'src/styles/vars';
+
+.bookcard {
+  display: flex;
+  padding: vars.$gutter*.3 0 vars.$gutter*1.4;
+  margin: 0 vars.$gutter*3;
+  justify-content: flex-start;
+  
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    min-width: 110px;
+    text-align: center;
+
+    &__cover {
+      height: 120px;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: vars.$gutter*.3 0;
+      font-size: .9em;
+    }
+
+    &__author {
+      color: vars.$color-grey;
+      font-size: .8em;
+    }
+
+    &__rating {
+      margin: vars.$gutter*.3;
+      
+      &__point {
+        width: 20px;
+      }
+    }
+
+    
+  }
+
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2em;
+    position: absolute;
+
+    &__heart {
+      width: 15px;
+      left: 112px;
+      position: relative;
+    }
+
+    &__plus {
+      width: 15px;
+      left: 112px;
+      position: relative;
+    }
+  }
+}

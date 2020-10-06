@@ -1,0 +1,502 @@
+@use 'src/styles/vars';
+
+
+
+.topofweek {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: vars.$gutter * 4;
+  margin-bottom: vars.$gutter;
+  max-width: 1500px;
+  margin: 50px 0;
+  margin-left: vars.$gutter;
+  justify-content: space-around;
+  
+
+  &__like {
+    display: flex;
+    border: 1px solid vars.$color_blackgrey;
+    border-radius: 14px;
+    padding-top: vars.$gutter;
+    position: relative;
+    max-height: 380px;
+    max-width: 45%;
+    min-width: 45%;
+    
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      padding: vars.$gutter * 1.1;
+      width: 100%;
+    }
+    
+  }
+
+  &__like--title {
+    background-color: vars.$color-green;
+    color: vars.$color-white;
+    padding: vars.$gutter * .2 vars.$gutter  vars.$gutter * .4 vars.$gutter;
+    border-radius: 6px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    font-weight: 500;
+    
+  }
+
+  &__like--title--heart {
+    font-size: vars.$gutter * 1.5;
+  }
+
+  &__book {
+    display: flex;
+    width: 33%;
+    padding-bottom: 3em;
+    margin-left: 30px;
+  }
+
+
+  &__book--name {
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: vars.$gutter * 1.1;
+    text-align: left;
+    
+  }
+
+  &__book--author {
+    color: vars.$color-grey;
+    font-weight: 450;
+    margin-top: vars.$gutter * .4;
+    font-size: vars.$gutter * .9;
+    text-align: left;
+  }
+ 
+  
+  &__cover {
+    height: 100px;
+  }
+
+  &__icons {
+     position: relative;
+     left: -14px;
+  }
+
+  
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    margin-top: vars.$gutter * .3;
+   
+    
+  }
+
+  &__book--icons {
+    display: flex;
+    margin-top: vars.$gutter * .3;
+    
+    
+  }
+  
+  &__book--icon {
+    width: 20px;
+  }
+
+
+
+
+  &__critical {
+
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid vars.$color_blackgrey;
+    border-radius: 14px;
+    padding: vars.$gutter * 2;
+    position: relative;
+    max-height: 380px;
+    min-width: 45%;
+    max-width: 45%;
+   
+    
+    
+  }
+
+  &__critical--title {
+    background-color: vars.$color-green;
+    color: vars.$color-white;
+    padding: vars.$gutter * .6 vars.$gutter  vars.$gutter * .5 vars.$gutter;
+    border-radius: 6px;
+    text-transform: uppercase;
+    position: absolute;
+    top: -17px;
+    left: -17px;
+    font-weight: 500;
+    
+  }
+
+  &__critical--feather {
+    width: 15px;
+   
+  }
+
+  &__critical--post {
+    width: 70%;
+    margin-top: vars.$gutter;
+    height: 300px;
+    object-fit: contain;
+  }
+
+  &__critical--header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__critical--author {
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+
+  &__critical--author--picture {
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  &__critical--author--infos {
+    margin-left: vars.$gutter * .8;
+    margin-top: vars.$gutter*.3;
+  }
+
+  &__critical--author--name {
+    font-weight: 500;
+  }
+
+  &__critical--date {
+    color: vars.$color-grey;
+    font-weight: 500;
+    margin-top: vars.$gutter * .1;
+  }
+
+  &__critical--rating {
+    margin-top: vars.$gutter * .1;
+    margin-right: vars.$gutter * .6;
+    color: vars.$color-green;
+    font-size: vars.$gutter * 1.5;
+    font-weight: bold;
+    border: 5px solid vars.$color-green;
+    padding: vars.$gutter * .6 vars.$gutter * .8;
+    border-radius: 50px;
+    height: 50px;
+  }
+
+
+  &__critical--content {
+    margin-top: vars.$gutter * 2.2;
+  }
+
+  &__critical--text {
+    height: 150px;
+    overflow: scroll;
+  }
+
+
+  &__critical__plus {
+
+    display: inline-block;
+    font-weight: 450;
+    color: vars.$color-white;
+    border-radius: 6px;
+    padding: vars.$gutter *.4;
+    margin-top: vars.$gutter;
+    background-color: vars.$color-green;
+  }
+
+
+  &__critical--book {
+    padding: vars.$gutter;
+    width: 33%;
+   }
+  &__critical--book--cover {
+    height: 70%;
+    text-align: center;
+    margin-top: vars.$gutter*1.5 ;
+  }
+
+  &__critical--book--title {
+    text-transform: uppercase;
+    color: vars.$color-blackgrey;
+    font-weight: 500;
+    margin-top: vars.$gutter * .6;
+  }
+
+  &__critical--book--author {
+    color: vars.$color-grey;
+    font-weight: 450;
+    margin-top: vars.$gutter * .2;
+    text-align: center;
+  }
+
+
+}
+
+.book-container {
+  display: flex;
+  align-items: center;
+  margin-top: vars.$gutter * 1.2;
+  perspective: 600px;
+}
+
+@keyframes initAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.book {
+  width: 155px;
+  height: 243px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-30deg);
+  transition: 1s ease;
+  animation: 1s ease 0s 1 initAnimation;
+}
+
+.book:hover {
+  transform: rotateY(0deg);
+}
+
+.book > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 130px;
+  height: 215px;
+  transform: translateZ(25px);
+  background-color: #01060f;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 5px 5px 20px #666;
+}
+
+.book::before {
+  position: absolute;
+  content: ' ';
+  background-color: blue;
+  left: -61px;
+  top: 2px;
+  width: 27px;
+  height: 214px;
+  transform: translateX(172px) rotateY(90deg);
+  background: linear-gradient(90deg, 
+    #fff 0%,
+    #f9f9f9 5%,
+    #fff 10%,
+    #f9f9f9 15%,
+    #fff 20%,
+    #f9f9f9 25%,
+    #fff 30%,
+    #f9f9f9 35%,
+    #fff 40%,
+    #f9f9f9 45%,
+    #fff 50%,
+    #f9f9f9 55%,
+    #fff 60%,
+    #f9f9f9 65%,
+    #fff 70%,
+    #f9f9f9 75%,
+    #fff 80%,
+    #f9f9f9 85%,
+    #fff 90%,
+    #f9f9f9 95%,
+    #fff 100%
+    );
+}
+
+.book::after {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  content: ' ';
+  width: 123px;
+  height: 222px;
+  transform: translateZ(-25px);
+  background-color: #01060f;
+  border-radius: 0 2px 2px 0;
+  box-shadow: -10px 0 50px 10px #666;
+}
+
+@media screen and (max-width: 1620px) {
+
+  .topofweek__like__container {
+   
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .topofweek {
+    display: flex;
+    flex-direction: column;
+
+    &__like {
+      max-width: 100%;
+      margin-bottom: vars.$gutter*2;
+
+   
+
+    }
+
+    &__critical {
+      max-width: 100%;
+    }
+
+    &__book--name {
+      max-width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topofweek {
+
+    &__like {
+      height: 280px;
+
+      &__container {
+        padding-top: vars.$gutter*3;
+        padding: vars.$gutter*2;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        width: 320px;
+       
+      }
+
+      &--title {
+        font-size: .8em;
+      }
+    
+    }
+    &__book {
+      height: 100%;
+      margin-right: vars.$gutter*8;
+
+    }
+    
+    &__critical {
+      height: 250px;
+
+      &--title {
+        font-size: .8em;
+      }
+
+      &--post {
+        width: 90%;
+        margin-top: vars.$gutter*.2;
+        object-fit: contain;
+        font-size: .7em;
+      }
+
+      &--content {
+        height: 100px;
+        margin-top: 10px;
+      }
+
+
+      &--text {
+        height: 100%;
+      }
+
+
+     &--book {
+      display: none;
+     }
+    }
+
+    
+  }
+
+  .book {
+    max-height: 140px;
+  }
+
+  .book > :first-child {
+    position: absolute;
+    top: 0;
+    left: 65px;
+    background-color: red;
+    width: 72px;
+    height: 120px;
+    transform: translateZ(25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 5px 5px 20px #666;
+  }
+  
+  .book::before {
+    position: absolute;
+    content: ' ';
+    background-color: blue;
+    left: -55px;
+    top: 1px;
+    width: 18px;
+    height: 115px;
+    transform: translateX(172px) rotateY(90deg);
+  }
+  
+  .book::after {
+    position: absolute;
+    top: -6px;
+    left: 65px;
+    content: ' ';
+    width: 56px;
+    height: 124px;
+    transform: translateZ(-25px);
+    background-color: #01060f;
+    border-radius: 0 2px 2px 0;
+    box-shadow: -10px 0 50px 10px #666;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .topofweek__like__container {
+    padding: vars.$gutter * 1.3;
+  }
+
+  .book {
+    margin-right: 0;
+  }
+
+  .topofweek__icon {
+    width: 15px;
+  }
+
+  .topofweek__book {
+    margin-right: vars.$gutter*8;
+  }
+
+  .topofweek__book--author {
+    margin-left: vars.$gutter*2.5;
+  }
+
+  .topofweek__book--name {
+    margin-left: vars.$gutter*1.5;
+  }
+
+  .topofweek__book--icons {
+    margin-left: vars.$gutter*2.8;
+  }
+
+}
