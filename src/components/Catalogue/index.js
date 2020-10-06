@@ -13,14 +13,11 @@ const Catalogue = ({
   // au 1e rendu du composant je veux charger les données du catalogue
   // je passe par useEffect et donne bien en 2e argument un tableau vide
   // j'exécute dans le callback la fonction que je passerai à la prop
-  // fetchRecipes
+  // fetchCatalogue, fetchAuthors, fetchCategories
   useEffect(() => {
     fetchCatalogue();
     fetchAuthors();
     fetchCategories();
-
-    // on vérifie si l'utilisateur est déjà loggué ou pas
-    // checkIsLogged();
   }, []);
 
   return (
