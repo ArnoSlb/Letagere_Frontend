@@ -1,3 +1,7 @@
 RewriteEngine On
-# dynamically setup base URIRewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$RewriteRule ^(.*) - [E=BASE_URI:%1]
-# redirect every request to index.php# and give the relative URL in "_url" GET paramRewriteCond %{REQUEST_FILENAME} !-dRewriteCond %{REQUEST_FILENAME} !-fRewriteCond %{HTTP:Authorization} ^(.*)RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]# rediriger TOUTES les requêtes qui mène au dossier dans lequel se trouve le .htaccess vers index.php# appeler /products => index.php?_url=/productsRewriteRule ^(.*)$ index.php [QSA,L]
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
