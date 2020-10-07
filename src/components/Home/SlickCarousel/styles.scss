@@ -1,0 +1,35 @@
+@use 'src/styles/vars';
+
+.slickcarousel {
+    margin-bottom: vars.$gutter*4;
+
+    &__1 {
+        height:20vw;
+        max-height:400px;
+        background-image: url(./src/assets/images/Banniere_Mutafukaz.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    &__2 {
+        height:20vw;
+        max-height:400px;
+        background-image: url(./src/assets/images/Banniere_Simoncini.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    &__3 {
+        height:20vw;
+        max-height:400px;
+        background-image: url(./src/assets/images/Banniere_Musso.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    &__4 {
+        height:20vw;
+        max-height:400px;
+        background-image: url( ./src/assets/images/Banniere_Witcher.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+
+}

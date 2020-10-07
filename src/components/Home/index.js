@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import DotLoader from 'react-spinners/DotLoader';
 import PropTypes from 'prop-types';
 
-import Carousel from 'src/components/Home/Carousel';
 import Presentation from 'src/components/Home/Presentation';
 import TopOfWeek from 'src/containers/TopOfWeek';
 import Offer from 'src/components/Home/HomeOffer';
+import SlickCarousel from 'src/components/Home/SlickCarousel';
 
 import './styles.scss';
 
@@ -29,7 +29,7 @@ const Home = ({ fetchHeart, loading }) => {
         </div>
       ) : (
         <div className="home">
-          <Carousel />
+          <SlickCarousel />
           <TopOfWeek />
           <Presentation />
           <Offer />
