@@ -8,7 +8,7 @@ import Home from 'src/containers/Home';
 import Catalogue from 'src/containers/Catalogue';
 // import CatalogueFiltre from 'src/components/CatalogueFiltre';
 import Critiques from 'src/components/Critiques';
-import Offres from 'src/components/Offres';
+import UnderConstruction from 'src/components/UnderConstruction';
 import ModalLogin from 'src/components/ModalLogin';
 import Livre from 'src/containers/Livre';
 import QuiSommesNous from 'src/components/Footer/QuiSommesNous';
@@ -32,25 +32,25 @@ const Letagere = () => (
         <Dashboard />
       </Route>
       <Route path="/critiques" exact>
-        <Critiques />
+        <UnderConstruction />
       </Route>
       <Route path="/offres" exact>
-        <Offres />
+        <UnderConstruction />
       </Route>
       <Route path="/connexion" exact>
         <ModalLogin />
       </Route>
       <Route path="/qui-sommes-nous" exact>
-        <QuiSommesNous />
+        <UnderConstruction />
       </Route>
       <Route path="/engagements" exact>
-        <NosEngagements />
+        <UnderConstruction />
       </Route>
       <Route path="/contacts" exact>
         <NousContacter />
       </Route>
       <Route path="/cookies" exact>
-        <Cookies />
+        <UnderConstruction />
       </Route>
       <Route path="/catalogue" exact>
         <Catalogue />
