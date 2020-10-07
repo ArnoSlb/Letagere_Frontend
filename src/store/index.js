@@ -9,6 +9,7 @@ import addWish from 'src/middleware/addWish';
 import authors from 'src/middleware/authors';
 import categories from 'src/middleware/categories';
 import livre from 'src/middleware/livre';
+import selections from 'src/middleware/selections_weekly';
 
 
 // == Enhancers
@@ -22,6 +23,7 @@ const enhancers = composeEnhancers(
     authors,
     categories,
     livre,
+    selections,
   ),
 );
 

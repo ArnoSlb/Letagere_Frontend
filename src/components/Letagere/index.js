@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { fab } from '@fortawesome/free-brands-svg-icons'; */
 
 import Header from 'src/components/Header';
-import Home from 'src/components/Home';
+import Home from 'src/containers/Home';
 import Catalogue from 'src/containers/Catalogue';
 // import CatalogueFiltre from 'src/components/CatalogueFiltre';
 import Critiques from 'src/components/Critiques';
@@ -52,43 +52,9 @@ const Letagere = () => (
       <Route path="/cookies" exact>
         <Cookies />
       </Route>
-      {/* {!loading && (
-          <> */}
       <Route path="/catalogue" exact>
         <Catalogue />
       </Route>
-      {/* <Route
-              exact
-              path="/catalogue/auteur/:slug"
-              render={
-                  // https://reactrouter.com/web/api/Route/component
-                  // grâce aux props component / render / children du composant Route,
-                  // on peut récupérer les 3 objets que react-router-dom met
-                  // à disposition de tous ses composants : history, location et match
-                  // Ces objets sont passés en paramètre du callback que l'on fourni
-                  // dans un objet. On peut le déstructurer et venir récupérer ce qui nous intéresse
-                  // eslint-disable-next-line arrow-body-style
-                  ({ match }) => {
-                    // ce qui nous intéresse ici, c'est de récupérer le param "slug" qui est contenu
-                    // dans l'objet match, et la propriété "params"
-                    // console.log(match);
-                    return (
-                      <CatalogueFiltre slug={match.params.slug} />
-                    );
-                  }
-                }
-            />
-            <Route
-              exact
-              path="/catalogue/categorie/:slug"
-              render={
-                  ({ match }) => {
-                    return (
-                      <CatalogueFiltre slug={match.params.slug} />
-                    );
-                  }
-                }
-            /> */}
       <Route
         exact
         path="/livre/:slug"
@@ -98,8 +64,6 @@ const Letagere = () => (
                   )
                 }
       />
-      {/* </>
-        )} */}
       <NotFound />
     </Switch>
     <Footer />

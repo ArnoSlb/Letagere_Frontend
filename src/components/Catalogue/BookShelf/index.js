@@ -14,14 +14,9 @@ const BookShelf = ({ livre }) => {
   const lien2 = livre.ISBN;
   const lien1 = '/livre/';
   const lien = lien1 + lien2;
-  // console.log(lien);
-
 
   const AddTo = new AddToLibrary();
   const AddToW = new AddToWish();
-
-
-
 
   return (
     <div className="bookshelf" >
