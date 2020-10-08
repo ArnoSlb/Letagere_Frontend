@@ -21,9 +21,9 @@ const BookShelf = ({ livre }) => {
   return (
     <div className="bookshelf" >
       <div className="bookshelf__infos">
-        <Link to={lien} className="bookshelf__link">
+        <a href={lien} className="bookshelf__link">
           <img className="bookshelf__infos__cover" src={livre.cover} alt="" />
-        </Link>
+        </a>
         <span className="bookshelf__infos__title">{livre.title}</span>
         <span className="bookshelf__infos__author">{firstAuthor}</span>
       </div>

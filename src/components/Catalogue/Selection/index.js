@@ -1,6 +1,5 @@
 import React from 'react';
 
-import BookCard from 'src/components/Catalogue/BookCard';
 import BookCard2 from 'src/components/Catalogue/BookCard2';
 import BookCard3 from 'src/components/Catalogue/BookCard3';
 import BookCard8 from 'src/components/Catalogue/BookCard8';
@@ -17,7 +16,7 @@ const Selection = () => (
         <BookCard8 />
         <BookCard11 />
         <BookCard9 />
-        <BookCard />
+        <BookCard3 />
         <BookCard10 />
         <BookCard3 />
         <BookCard2 />

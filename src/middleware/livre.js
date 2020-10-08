@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { FETCH_BOOK, saveBook } from 'src/actions/livre';
+import { FETCH_BOOK_AUTHOR, saveBookAuthor } from 'src/actions/livreAuteur';
 
 const livre = (store) => (next) => (action) => {
   switch (action.type) {
@@ -10,7 +11,18 @@ const livre = (store) => (next) => (action) => {
           store.dispatch(bookToDispatch);
           console.log('livre middleware ', response);
         })
-        .catch((error) => console.log('catalogue trié par auteur', error));
+        .catch((error) => console.log('livre middleware', error));
+      // console.log('middleware', action.authorId);
+      break;
+    }
+    case FETCH_BOOK_AUTHOR: {
+      axios.get(`http://3.91.26.197/projet-book-back/API/public/author/${action.authorId}`)
+        .then((response) => {
+          const bookAuthorToDispatch = saveBookAuthor(response.data);
+          store.dispatch(bookAuthorToDispatch);
+          console.log('livre middleware auteur', response);
+        })
+        .catch((error) => console.log('livre middleware auteur', error));
       // console.log('middleware', action.authorId);
       break;
     }

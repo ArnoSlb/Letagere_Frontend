@@ -1,29 +1,58 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import BookCard4 from 'src/components/Catalogue/BookCard4';
 import BookCard5 from 'src/components/Catalogue/BookCard5';
 import BookCard6 from 'src/components/Catalogue/BookCard6';
 import BookCard7 from 'src/components/Catalogue/BookCard7';
-import arrow from 'src/assets/images/arrow-88-128.png';
+import BookCard from 'src/components/Catalogue/BookCard';
+
 import './styles.scss';
 
-const LivreAuteur = () => (
-  <div className="livreauteur">
-    <div className="livreauteur__frame">
-      <h1 className="livreauteur__frame__title">Les livres du même auteur</h1>
-      <div className="livreauteur__frame__position">
-        {/* <img className="livreauteur__frame__position__flechegauche" src={arrow} alt="" /> */}
-        <div className="livreauteur__frame__position__auteur">
-          <BookCard4 />
-          <BookCard5 />
-          <BookCard6 />
-          <BookCard7 />
+const LivreAuteur = ({ livre, fetchBookAuthor, livreAuteur, loadingAuteur }) => {
+  // console.log('LivreAuteur', livre);
+  const author = livre.authors.[0];
+  const authorId = author.authorId.id;
+  // console.log('livreAuteurId', authorId);
+  // console.log('LivreAuteur', livreAuteur);
+
+  useEffect(() => {
+    fetchBookAuthor(authorId);
+  }, []);
+
+  console.log('loadingAuteur', loadingAuteur);
+  if (loadingAuteur === false) {
+    const livreAuteurListe = livreAuteur.books;
+    console.log('livreAuteurListe', livreAuteurListe);
+    var dataAuteur = livreAuteurListe.length ? (
+      livreAuteurListe.map((livre) => (
+        <BookCard livre={livre} key={livre.id} />
+      ))
+    ) : (
+      <p>Aucun livre du même auteur</p>
+    );
+  }
+
+  // const postData = livreAuteurListe.length ? (
+  //   livreAuteurListe.map((livre) => (
+  //     // <BookShelf livre={livre} key={livre.id} />
+  //     <div>Test</div>
+  //   ))
+  // ) : (
+  //   <p>Aucun livre pour l'instant</p>
+  // );
+
+  return (
+    <div className="livreauteur">
+      <div className="livreauteur__frame">
+        <h1 className="livreauteur__frame__title">Les livres du même auteur ( {livreAuteur.countItems} ) </h1>
+        <div className="livreauteur__frame__position">
+          <div className="livreauteur__frame__position__auteur">
+            {dataAuteur}
+          </div>
         </div>
-        {/* <img className="livreauteur__frame__position__flechedroite" src={arrow} alt="" /> */}
       </div>
     </div>
-
-  </div>
-);
+  );
+};
 
 export default LivreAuteur;
