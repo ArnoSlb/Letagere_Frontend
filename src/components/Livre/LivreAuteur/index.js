@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 
-import BookCard4 from 'src/components/Catalogue/BookCard4';
-import BookCard5 from 'src/components/Catalogue/BookCard5';
-import BookCard6 from 'src/components/Catalogue/BookCard6';
-import BookCard7 from 'src/components/Catalogue/BookCard7';
 import BookCard from 'src/components/Catalogue/BookCard';
 
 import './styles.scss';
@@ -19,10 +15,10 @@ const LivreAuteur = ({ livre, fetchBookAuthor, livreAuteur, loadingAuteur }) => 
     fetchBookAuthor(authorId);
   }, []);
 
-  console.log('loadingAuteur', loadingAuteur);
+  // console.log('loadingAuteur', loadingAuteur);
   if (loadingAuteur === false) {
     const livreAuteurListe = livreAuteur.books;
-    console.log('livreAuteurListe', livreAuteurListe);
+    // console.log('livreAuteurListe', livreAuteurListe);
     var dataAuteur = livreAuteurListe.length ? (
       livreAuteurListe.map((livre) => (
         <BookCard livre={livre} key={livre.id} />

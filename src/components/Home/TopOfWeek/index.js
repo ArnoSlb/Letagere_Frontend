@@ -26,7 +26,6 @@ const TopOfWeek = ({ heart }) => {
       const lien = lien1 + lien2;
       const AddTo = new AddToLibrary();
       const AddToW = new AddToWish();
-
       return (
         <div className="topofweek__book" key={heartBook.id}>
           <div className="topofweek__book--info">
