@@ -11,10 +11,16 @@
     display: flex;
     flex-direction: column;
     min-width: 110px;
+    align-items: center;
     text-align: center;
+
+    &__cover__icons {
+      display: flex;
+    }
 
     &__cover {
       height: 120px;
+      margin-left: vars.$gutter;
     }
 
     &__title {
@@ -43,19 +49,16 @@
   &__icons {
     display: flex;
     flex-direction: column;
-    margin-left: 0.2em;
-    position: absolute;
+    margin-left: vars.$gutter*.2;
 
     &__heart {
       width: 15px;
       left: 112px;
-      position: relative;
     }
 
     &__plus {
       width: 15px;
       left: 112px;
-      position: relative;
     }
   }
 }

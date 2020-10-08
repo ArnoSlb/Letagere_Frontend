@@ -1,10 +1,10 @@
 @use 'src/styles/vars';
 
 .livreauteur {
-  height: 350px;
+  min-height: 350px;
 
   &__frame {
-    margin-top: vars.$gutter*2.5;
+    margin-top: vars.$gutter*2;
     border: solid 1px vars.$color-blackgrey;
     border-radius: 14px;
     position: absolute;
@@ -26,8 +26,7 @@
 
     &__position {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      overflow: scroll;
 
       &__flechedroite {
         height: 20px;
@@ -44,7 +43,6 @@
 
       &__auteur {
         display: flex;
-        justify-content: space-around;
         width: 80%;
       }
     }

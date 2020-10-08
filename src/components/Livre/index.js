@@ -4,7 +4,7 @@ import DotLoader from 'react-spinners/DotLoader';
 import LivrePresentation from 'src/components/Livre/LivrePresentation';
 import LivreOffres from 'src/components/Livre/LivreOffres';
 import LivreInteret from 'src/components/Livre/LivreInteret';
-import LivreAuteur from 'src/components/Livre/LivreAuteur';
+import LivreAuteur from 'src/containers/LivreAuteur';
 import LivreEnsembleAvis from 'src/components/Livre/LivreEnsembleAvis';
 import AddMessage from 'src/components/AddTo/AddMessage';
 
@@ -13,7 +13,7 @@ import './styles.scss';
 const Livre = ({
   livre, slug, fetchBook, loading,
 }) => {
-  console.log('composant livre', livre);
+  // console.log('composant livre', livre);
 
   // au 1e rendu du composant je veux charger les données du catalogue
   // je passe par useEffect et donne bien en 2e argument un tableau vide
@@ -24,10 +24,10 @@ const Livre = ({
   }, []);
 
   const reviews = livre.reviews;
-  console.log('reviews', reviews);
+  // console.log('reviews', reviews);
 
   const advices = livre.advices;
-  console.log('advices', advices);
+  // console.log('advices', advices);
 
   return (
     <div className="livre_container">
