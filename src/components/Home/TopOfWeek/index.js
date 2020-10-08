@@ -32,7 +32,7 @@ const TopOfWeek = ({ heart }) => {
           <div className="topofweek__book--info">
             <div className="book-container">
               <Link className="book" to={lien}>
-                <img className="topofweek__cover" src={firstCover} alt="Couverture de livre" />
+                <img className="topofweek__cover" src={heartBook.cover} alt="Couverture de livre" />
               </Link>
             </div>
             <Link to={lien}>
