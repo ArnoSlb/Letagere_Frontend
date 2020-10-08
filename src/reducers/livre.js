@@ -1,5 +1,6 @@
 import { SAVE_BOOK } from 'src/actions/livre';
 import { SAVE_BOOK_AUTHOR } from 'src/actions/livreAuteur';
+import { SAVE_BOOK_INTEREST } from 'src/actions/livreInteret';
 
 const initialState = {
   livre: [],
@@ -21,6 +22,12 @@ const livre = (state = initialState, action = {}) => {
         ...state,
         livreAuteur: action.bookAuthor,
         loadingAuteur: false,
+      };
+    case SAVE_BOOK_INTEREST:
+      return {
+        ...state,
+        livreInteret: action.bookInterest,
+        loadingInteret: false,
       };
     default:
       return state;

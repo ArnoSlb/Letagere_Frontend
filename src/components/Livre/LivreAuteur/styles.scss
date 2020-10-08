@@ -2,9 +2,10 @@
 
 .livreauteur {
   min-height: 350px;
+  margin-bottom: vars.$gutter*3;
 
   &__frame {
-    margin-top: vars.$gutter*2;
+    margin-top: vars.$gutter*3.8;
     border: solid 1px vars.$color-blackgrey;
     border-radius: 14px;
     position: absolute;

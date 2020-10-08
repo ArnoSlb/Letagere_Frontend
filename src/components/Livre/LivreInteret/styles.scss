@@ -26,9 +26,7 @@
 
     &__position {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      overflow: hidden;
+      overflow: scroll;
 
       &__flechedroite {
         height: 20px;
@@ -45,7 +43,6 @@
 
       &__interet {
         display: flex;
-        justify-content: space-around;
         width: 80%;
       }
     }

@@ -3,7 +3,7 @@ import DotLoader from 'react-spinners/DotLoader';
 
 import LivrePresentation from 'src/components/Livre/LivrePresentation';
 import LivreOffres from 'src/components/Livre/LivreOffres';
-import LivreInteret from 'src/components/Livre/LivreInteret';
+import LivreInteret from 'src/containers/LivreInteret';
 import LivreAuteur from 'src/containers/LivreAuteur';
 import LivreEnsembleAvis from 'src/components/Livre/LivreEnsembleAvis';
 import AddMessage from 'src/components/AddTo/AddMessage';
