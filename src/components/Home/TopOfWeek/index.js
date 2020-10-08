@@ -31,9 +31,9 @@ const TopOfWeek = ({ heart }) => {
         <div className="topofweek__book" key={heartBook.id}>
           <div className="topofweek__book--info">
             <div className="book-container">
-              <Link className="book" to={lien}>
+              <a className="book" href={lien}>
                 <img className="topofweek__cover" src={heartBook.cover} alt="Couverture de livre" />
-              </Link>
+              </a>
             </div>
             <Link to={lien}>
               <p className="topofweek__book--name">{heartBook.title}</p>
