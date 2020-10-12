@@ -20,8 +20,12 @@ const CatalogueShelves = ({ catalogue }) => {
   const tailles = viewportSize();
   const largeur = tailles.width;
 
-  const widthBookShelfList = (((72 * largeur) / 100) - 250);
+  let widthBookShelfList = (((72 * largeur) / 100) - 250);
+  if (widthBookShelfList > 1100) {
+    widthBookShelfList = 1100;
+  }
   // widthBookByShelfList est égale à 72% de la largeur du viewport moins 250px(largeur du filtre)
+  console.log(widthBookShelfList);
 
   const booksByShelf = Math.floor(widthBookShelfList / 171.76);
   // booksByshlef est égale à la largeur de widthBookShelfList divisé par la largeur d'un item
