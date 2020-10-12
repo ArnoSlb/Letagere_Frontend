@@ -4,7 +4,7 @@
   min-width: 250px;
   border-right: solid 1px vars.$color-lightgrey;
   margin-bottom: vars.$gutter*2;
-  height: 1300px;
+  min-height: 540px;
   font-size: .9em;
 
   &__title {
