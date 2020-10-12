@@ -12,7 +12,7 @@
 
   &__li {
     a {
-      margin: 0 vars.$gutter * 5;
+      margin: 0 2vw;
       color: vars.$color_blackgrey;
     }
     
@@ -28,20 +28,6 @@
   }
 
 }
-
-@media screen and (max-width: 1600px) {
-  .nav {
-  
-    &__li {
-      a {
-        margin: 0 vars.$gutter * 2;
-      }
-        
-      }
-    }
-  
-  }
-
 
 @media screen and (max-width: 1024px) {
   .nav {
