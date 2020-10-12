@@ -11,13 +11,13 @@ const mapStateToProps = ({ authors, categories }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   fetchAuthor: (authorId) => {
-    console.log('containers', authorId);
+    // console.log('containers', authorId);
 
     dispatch(fetchAuthor(authorId));
   },
 
   fetchCategory: (categoryId) => {
-    console.log('containers', categoryId);
+    // console.log('containers', categoryId);
 
     dispatch(fetchCategory(categoryId));
   },

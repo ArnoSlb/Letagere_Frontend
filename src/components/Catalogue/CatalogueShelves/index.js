@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-
 import Shelf from 'src/components/Catalogue/CatalogueShelf';
 import BookShelfList from 'src/containers/BookShelfList';
 
@@ -25,7 +23,7 @@ const CatalogueShelves = ({ catalogue }) => {
     widthBookShelfList = 1100;
   }
   // widthBookByShelfList est égale à 72% de la largeur du viewport moins 250px(largeur du filtre)
-  console.log(widthBookShelfList);
+  // console.log(widthBookShelfList);
 
   const booksByShelf = Math.floor(widthBookShelfList / 171.76);
   // booksByshlef est égale à la largeur de widthBookShelfList divisé par la largeur d'un item
@@ -53,9 +51,17 @@ const CatalogueShelves = ({ catalogue }) => {
   // je limite le nombre de boucle avec slice pour ne pas boucler 36 fois (nmbre d'items dans le tableau)
   // je rends dynamique le nmbre limite avec shelvesNumber
 
+  let countItems = '';
+  if (catalogue.countItems <= 1) {
+    countItems = `${catalogue.countItems} résultat trouvé à votre recherche`;
+  }
+  else {
+    countItems = `${catalogue.countItems} résultats trouvés à votre recherche`;
+  }
+
   return (
     <div className="catalogueshelves">
-      <p className="catalogue__countitems">{catalogue.countItems} résultats trouvés à votre recherche</p>
+      <p className="catalogue__countitems">{countItems}</p>
       {shelves}
       <BookShelfList />
     </div>
