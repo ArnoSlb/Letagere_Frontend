@@ -1,10 +1,6 @@
 import React, { useEffect} from 'react';
 
 import BookCard from 'src/components/Catalogue/BookCard';
-import BookCard11 from 'src/components/Catalogue/BookCard11';
-import BookCard3 from 'src/components/Catalogue/BookCard3';
-import BookCard8 from 'src/components/Catalogue/BookCard8';
-import BookCard12 from 'src/components/Catalogue/BookCard12';
 
 import './styles.scss';
 

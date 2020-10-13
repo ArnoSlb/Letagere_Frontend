@@ -6,7 +6,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'; */
 import Header from 'src/components/Header';
 import Home from 'src/containers/Home';
 import Catalogue from 'src/containers/Catalogue';
-// import CatalogueFiltre from 'src/components/CatalogueFiltre';
+import CatalogueFiltre from 'src/containers/CatalogueFiltre';
 import Critiques from 'src/components/Critiques';
 import UnderConstruction from 'src/components/UnderConstruction';
 import ModalLogin from 'src/components/ModalLogin';
@@ -55,6 +55,15 @@ const Letagere = () => (
       <Route path="/catalogue" exact>
         <Catalogue />
       </Route>
+      <Route
+        exact
+        path="/catalogue/auteur/:id/:indexpage"
+        render={
+              ({ match }) => (
+                <CatalogueFiltre slug={match} />
+              )
+        }
+      />
       <Route
         exact
         path="/livre/:slug"

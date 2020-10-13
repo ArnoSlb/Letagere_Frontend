@@ -2,6 +2,7 @@
 
 // action types
 export const FETCH_CATALOGUE = 'FETCH_CATALOGUE';
+export const FETCH_CATALOGUE_FILTER_AUTHOR = 'FETCH_CATALOGUE_FILTER_AUTHOR';
 export const FETCH_AUTHOR = 'FETCH_AUTHOR';
 export const FETCH_CATEGORY = 'FETCH_CATEGORY';
 export const SAVE_CATALOGUE = 'SAVE_CATALOGUE';
@@ -10,6 +11,12 @@ export const SAVE_ITEMS = 'SAVE_ITEMS';
 // action creators
 export const fetchCatalogue = () => ({
   type: FETCH_CATALOGUE,
+});
+
+export const fetchCatalogueFilterAuthor = (authorId, indexPage) => ({
+  type: FETCH_CATALOGUE_FILTER_AUTHOR,
+  authorId,
+  indexPage,
 });
 
 export const fetchAuthor = (authorId) => ({

@@ -19,6 +19,22 @@
   
 }
 
+.plusbutton {
+  
+  display: flex;
+  justify-content: center;
+  margin: vars.$gutter*2;
+
+  &__link {
+    background-color: vars.$color-green;
+    padding: vars.$gutter*.5 vars.$gutter;
+    border-radius: vars.$gutter*.3;
+    color: vars.$color-white;
+
+  }
+
+}
+
 @media screen and (max-width:1280px) {
   .catalogueshelves {
     margin: 1px 1px 1px 1px;

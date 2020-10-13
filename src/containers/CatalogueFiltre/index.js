@@ -1,17 +1,19 @@
 import { connect } from 'react-redux';
-import Catalogue from 'src/components/Catalogue';
-import { fetchCatalogue } from 'src/actions/catalogue';
+import CatalogueFiltre from 'src/components/CatalogueFiltre';
+import { fetchCatalogue, fetchCatalogueFilterAuthor } from 'src/actions/catalogue';
 import { fetchAuthors } from 'src/actions/authors';
 import { fetchCategories } from 'src/actions/categories';
 import { fetchAdd } from 'src/actions/add';
 import { fetchAddWish } from 'src/actions/addWish';
 import { fetchSelection } from 'src/actions/catalogueSelection';
 
-const mapStateToProps = ({ catalogue, catalogueSelection }) => {
-
+const mapStateToProps = ({ catalogue, catalogueSelection }, ownProps) => {
+  // console.log(ownProps);
   return ({
     loading: catalogue.loading,
     loadingSelection: catalogueSelection.loading,
+    authorId: ownProps.slug.params.id,
+    indexPage: ownProps.slug.params.indexpage,
   });
 };
 
@@ -19,6 +21,15 @@ const mapDispatchToProps = (dispatch) => ({
   fetchCatalogue: () => {
     dispatch(fetchCatalogue());
   },
+  fetchCatalogueFilterAuthor: (authorId, indexPage) => {
+    console.log('containers catalogue Filtre', authorId, indexPage);
+    dispatch(fetchCatalogueFilterAuthor(authorId, indexPage));
+  },
+  // fetchBook: (bookISBN) => {
+  //   // console.log('containers livre', bookISBN);
+
+  //   dispatch(fetchBook(bookISBN));
+  // },
   fetchAuthors: () => {
     dispatch(fetchAuthors());
   },
@@ -36,4 +47,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Catalogue);
+export default connect(mapStateToProps, mapDispatchToProps)(CatalogueFiltre);

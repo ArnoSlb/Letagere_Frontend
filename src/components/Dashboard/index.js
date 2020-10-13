@@ -11,11 +11,6 @@ import MyWish from 'src/containers/MyWish';
 import AuthService from 'src/components/ModalLogin/Auth/AuthService';
 import Didier from 'src/assets/images/Icon awesome-user-alt.png';
 import PositionIcon from 'src/assets/images/map-marker-2-xxl.png';
-import BookShelf from 'src/components/Catalogue/BookShelf';
-import BookShelf2 from 'src/components/Catalogue/BookShelf2';
-import BookShelf3 from 'src/components/Catalogue/BookShelf3';
-import BookShelf4 from 'src/components/Catalogue/BookShelf4';
-import BookShelf5 from 'src/components/Catalogue/BookShelf5';
 import Marcel from 'src/assets/images/marcel.png';
 import Kevin from 'src/assets/images/kevin.png';
 import Julie from 'src/assets/images/julie.png';
@@ -30,26 +25,6 @@ let Profile = 'Se connecter';
 // console.log(Profile);
 
 const Dashboard = () => (
-  /*  bookListLibrary() {
-    axios.defaults.headers = { Authorization: `Bearer ${Auth.getToken()}`, 'Content-Type': 'application/json' };
-    axios.get('http://3.91.26.197/projet-book-back/API/public/api/library/list')
-      .then((response) => {
-        console.log('response', response);
-      });
-  }
-
-  bookListWish() {
-    axios.defaults.headers = { Authorization: `Bearer ${Auth.getToken()}`, 'Content-Type': 'application/json' };
-    axios.get('http://3.91.26.197/projet-book-back/API/public/api/library/list/wishes')
-      .then((response) => {
-        console.log('response', response);
-      });
-  }
-
-  render() {
-    this.bookListLibrary();
-    this.bookListWish(); 
- */
   <div className="dashboard">
 
     <div className="dashboard__user-informations-container">

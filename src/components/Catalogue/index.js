@@ -14,6 +14,8 @@ const Catalogue = ({
   fetchCategories,
   fetchSelection,
   loadingSelection,
+  authorId,
+  indexPage,
 }) => {
   // au 1e rendu du composant je veux charger les données du catalogue
   // je passe par useEffect et donne bien en 2e argument un tableau vide

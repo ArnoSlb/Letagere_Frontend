@@ -59,11 +59,20 @@ const CatalogueShelves = ({ catalogue }) => {
     countItems = `${catalogue.countItems} résultats trouvés à votre recherche`;
   }
 
+  let plusButton = '';
+  if (catalogue.countItems > 30) {
+    plusButton = <div className="plusbutton"><a className="plusbutton__link" href="">Voir plus</a></div>
+  }
+  else {
+    plusButton = '';
+  }
+
   return (
     <div className="catalogueshelves">
       <p className="catalogue__countitems">{countItems}</p>
       {shelves}
       <BookShelfList />
+      {plusButton}
     </div>
   );
 };
