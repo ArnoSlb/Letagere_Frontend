@@ -5,9 +5,11 @@ import { fetchAuthors } from 'src/actions/authors';
 import { fetchCategories } from 'src/actions/categories';
 import { fetchAdd } from 'src/actions/add';
 import { fetchAddWish } from 'src/actions/addWish';
+import { fetchSelection } from 'src/actions/catalogueSelection';
 
 const mapStateToProps = (state) => ({
   loading: state.catalogue.loading,
+  loadingSelection: state.catalogueSelection.loading,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -25,6 +27,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   fetchAddWish: () => {
     dispatch(fetchAdd());
+  },
+  fetchSelection: () => {
+    dispatch(fetchSelection());
   },
 });
 
