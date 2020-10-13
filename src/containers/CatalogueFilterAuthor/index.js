@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CatalogueFiltre from 'src/components/CatalogueFiltre';
+import CatalogueFilterAuthor from 'src/components/CatalogueFilterAuthor';
 import { fetchCatalogue, fetchCatalogueFilterAuthor } from 'src/actions/catalogue';
 import { fetchAuthors } from 'src/actions/authors';
 import { fetchCategories } from 'src/actions/categories';
@@ -47,4 +47,4 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CatalogueFiltre);
+export default connect(mapStateToProps, mapDispatchToProps)(CatalogueFilterAuthor);

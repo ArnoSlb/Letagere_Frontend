@@ -3,7 +3,7 @@ import DotLoader from 'react-spinners/DotLoader';
 
 import Selection from 'src/containers/CatalogueSelection';
 import Filter from 'src/containers/Filter';
-import Shelves from 'src/containers/CatalogueShelves';
+import CatalogueShelvesAuthor from 'src/containers/CatalogueShelvesAuthor';
 import AddMessage from 'src/components/AddTo/AddMessage';
 
 const Catalogue = ({
@@ -62,7 +62,7 @@ const Catalogue = ({
               </div>
               <div className="catalogue__miseenpage">
                 <Filter />
-                <Shelves />
+                <CatalogueShelvesAuthor authorId={authorId} indexPage={indexPage} />
               </div>
             </div>
           )}

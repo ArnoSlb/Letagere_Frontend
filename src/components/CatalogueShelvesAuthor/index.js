@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Shelf from 'src/components/Catalogue/CatalogueShelf';
 import BookShelfList from 'src/containers/BookShelfList';
 
-import './styles.scss';
-
-const CatalogueShelves = ({ catalogue }) => {
-  // console.log(catalogue);
+const CatalogueShelvesAuthor = ({
+  catalogue, authorId, indexPage, fetchCatalogueFilterAuthor,
+}) => {
+  // console.log(indexPage);
 
   function viewportSize() {
     const d = document.documentElement;
@@ -59,20 +60,14 @@ const CatalogueShelves = ({ catalogue }) => {
     countItems = `${catalogue.countItems} résultats trouvés à votre recherche`;
   }
 
-  let plusButton = '';
-  if (catalogue.countItems > 30) {
-    plusButton = <div className="plusbutton"><a className="plusbutton__link" href="">Voir plus</a></div>;
-  }
-  else {
-    plusButton = '';
-  }
+  const newIndexPage = Number(indexPage) + 1;
 
-  let articlesViewed = 30;
+  let articlesViewed = Number(indexPage) * 30;
   if (articlesViewed > catalogue.countItems) {
     articlesViewed = catalogue.countItems;
   }
   else {
-    articlesViewed = 30;
+    articlesViewed = Number(indexPage) * 30;
   }
 
   let resultViewed = '';
@@ -81,6 +76,27 @@ const CatalogueShelves = ({ catalogue }) => {
   }
   else {
     resultViewed = `Vous avez vu ${articlesViewed} sur ${catalogue.countItems} résultats`;
+  }
+
+  let plusButton = '';
+  if (catalogue.countItems == articlesViewed) {
+    plusButton = '';
+  }
+  else if (catalogue.countItems > 30) {
+    plusButton = (
+      <div className="plusbutton">
+        <Link
+          onClick={() => fetchCatalogueFilterAuthor(authorId, newIndexPage)}
+          className="plusbutton__link"
+          to={`/catalogue/auteur/${authorId}/${newIndexPage}`}
+        >
+          Voir plus
+        </Link>
+      </div>
+    );
+  }
+  else {
+    plusButton = '';
   }
 
   return (
@@ -95,4 +111,4 @@ const CatalogueShelves = ({ catalogue }) => {
 };
 // console.log(catalogue);
 
-export default CatalogueShelves;
+export default CatalogueShelvesAuthor;
