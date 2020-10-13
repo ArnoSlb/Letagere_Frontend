@@ -3,12 +3,11 @@ import DotLoader from 'react-spinners/DotLoader';
 
 import Selection from 'src/containers/CatalogueSelection';
 import Filter from 'src/containers/Filter';
-import Shelves from 'src/containers/CatalogueShelves';
+import CatalogueShelvesAuthor from 'src/containers/CatalogueShelvesAuthor';
 import AddMessage from 'src/components/AddTo/AddMessage';
-import './styles.scss';
 
 const Catalogue = ({
-  fetchCatalogue,
+  fetchCatalogueFilterAuthor,
   loading,
   fetchAuthors,
   fetchCategories,
@@ -22,7 +21,7 @@ const Catalogue = ({
   // j'exécute dans le callback la fonction que je passerai à la prop
   // fetchCatalogue, fetchAuthors, fetchCategories
   useEffect(() => {
-    fetchCatalogue();
+    fetchCatalogueFilterAuthor(authorId, indexPage);
     fetchAuthors();
     fetchCategories();
     fetchSelection();
@@ -63,7 +62,7 @@ const Catalogue = ({
               </div>
               <div className="catalogue__miseenpage">
                 <Filter />
-                <Shelves />
+                <CatalogueShelvesAuthor authorId={authorId} indexPage={indexPage} />
               </div>
             </div>
           )}

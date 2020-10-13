@@ -10,7 +10,7 @@ import authors from 'src/middleware/authors';
 import categories from 'src/middleware/categories';
 import livre from 'src/middleware/livre';
 import selections from 'src/middleware/selections_weekly';
-
+import catalogueSelection from 'src/middleware/catalogueSelection';
 
 // == Enhancers
 const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
@@ -18,6 +18,7 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 const enhancers = composeEnhancers(
   applyMiddleware(
     catalogue,
+    catalogueSelection,
     add,
     addWish,
     authors,

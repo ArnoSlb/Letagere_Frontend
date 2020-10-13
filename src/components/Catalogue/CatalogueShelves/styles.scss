@@ -15,8 +15,27 @@
     font-weight: 500;
   }
 
-
+  &__resultsview {
+    text-align: center;
+    margin: vars.$gutter;
+  }
   
+}
+
+.plusbutton {
+  
+  display: flex;
+  justify-content: center;
+  margin-bottom: vars.$gutter*2;
+
+  &__link {
+    background-color: vars.$color-green;
+    padding: vars.$gutter*.5 vars.$gutter;
+    border-radius: vars.$gutter*.3;
+    color: vars.$color-white;
+
+  }
+
 }
 
 @media screen and (max-width:1280px) {
