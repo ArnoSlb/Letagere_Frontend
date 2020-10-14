@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { getAuthorUrl, getCategoryUrl } from 'src/selectors/catalogue';
 
 import './styles.scss';
 
 const Filter = ({
-  authors, categories, fetchAuthor, fetchCategory,
+  authors, categories,
 }) => {
   // console.log('filter', categories);
 
@@ -23,7 +21,9 @@ const Filter = ({
   const categoriesArray = categories.categories;
   const categoriesList = categoriesArray.length ? (
     categoriesArray.map((category) => (
-      <li onClick={() => fetchCategory(category.id)}>{category.name}</li>
+      <li>
+        <a href={`/catalogue/categorie/${category.id}/1` }>{category.name}</a>
+      </li>
     ))
   ) : (
     <p>Aucune catégorie</p>

@@ -7,6 +7,7 @@ import Header from 'src/components/Header';
 import Home from 'src/containers/Home';
 import Catalogue from 'src/containers/Catalogue';
 import CatalogueFilterAuthor from 'src/containers/CatalogueFilterAuthor';
+import CatalogueFilterCategory from 'src/containers/CatalogueFilterCategory';
 import Critiques from 'src/components/Critiques';
 import UnderConstruction from 'src/components/UnderConstruction';
 import ModalLogin from 'src/components/ModalLogin';
@@ -61,6 +62,15 @@ const Letagere = () => (
         render={
               ({ match }) => (
                 <CatalogueFilterAuthor slug={match} />
+              )
+        }
+      />
+      <Route
+        exact
+        path="/catalogue/categorie/:id/:indexpage"
+        render={
+              ({ match }) => (
+                <CatalogueFilterCategory slug={match} />
               )
         }
       />
