@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Shelves from 'src/components/Catalogue/CatalogueShelves';
+import { fetchCatalogueIndex } from 'src/actions/catalogue';
 
 const mapStateToProps = ({ catalogue }) => ({
   // on recoit un state du store qui provient du reducer
@@ -12,6 +13,11 @@ const mapStateToProps = ({ catalogue }) => ({
   catalogue: catalogue.catalogue,
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = (dispatch) => ({
+  fetchCatalogueIndex: (indexPage) => {
+    console.log('containers CatalogueShelves', indexPage);
+    dispatch(fetchCatalogueIndex(indexPage));
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shelves);
