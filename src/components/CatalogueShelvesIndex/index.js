@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import Shelf from 'src/components/Catalogue/CatalogueShelf';
 import BookShelfList from 'src/containers/BookShelfList';
 
-import './styles.scss';
-
-const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
-  // console.log(catalogue);
+const CatalogueShelvesIndex = ({
+  catalogue, indexPage, fetchCatalogueIndex,
+}) => {
+  // console.log(indexPage);
 
   function viewportSize() {
     const d = document.documentElement;
@@ -60,12 +60,14 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
     countItems = `${catalogue.countItems} résultats trouvés à votre recherche`;
   }
 
-  let articlesViewed = 30;
+  const newIndexPage = Number(indexPage) + 1;
+
+  let articlesViewed = Number(indexPage) * 30;
   if (articlesViewed > catalogue.countItems) {
     articlesViewed = catalogue.countItems;
   }
   else {
-    articlesViewed = 30;
+    articlesViewed = Number(indexPage) * 30;
   }
 
   let resultViewed = '';
@@ -75,8 +77,6 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
   else {
     resultViewed = `Vous avez vu ${articlesViewed} sur ${catalogue.countItems} résultats`;
   }
-
-  const newIndexPage = 2;
 
   let plusButton = '';
   if (catalogue.countItems == articlesViewed) {
@@ -111,4 +111,4 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
 };
 // console.log(catalogue);
 
-export default CatalogueShelves;
+export default CatalogueShelvesIndex;

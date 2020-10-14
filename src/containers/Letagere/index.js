@@ -8,7 +8,6 @@ import { fetchAddWish } from 'src/actions/addWish';
 import { fetchAuthors } from 'src/actions/authors';
 import { fetchCategories } from 'src/actions/categories';
 
-
 const mapStateToProps = null;
 
 const mapDispatchToProps = (dispatch) => ({
