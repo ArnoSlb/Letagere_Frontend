@@ -34,7 +34,7 @@ const Letagere = () => (
         <Dashboard />
       </Route>
       <Route path="/critiques" exact>
-        <UnderConstruction />
+        <Critiques />
       </Route>
       <Route path="/offres" exact>
         <UnderConstruction />

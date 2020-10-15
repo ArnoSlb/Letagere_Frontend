@@ -7,13 +7,10 @@ import { fetchAdd } from 'src/actions/add';
 import { fetchAddWish } from 'src/actions/addWish';
 import { fetchSelection } from 'src/actions/catalogueSelection';
 
-const mapStateToProps = ({ catalogue, catalogueSelection }) => {
-
-  return ({
-    loading: catalogue.loading,
-    loadingSelection: catalogueSelection.loading,
-  });
-};
+const mapStateToProps = ({ catalogue, catalogueSelection }) => ({
+  loading: catalogue.loading,
+  loadingSelection: catalogueSelection.loading,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchCatalogue: () => {

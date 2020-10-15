@@ -1,10 +1,12 @@
 import React from 'react';
 
+import CritiqueDeLaSemaine from 'src/components/Critiques/CritiqueDeLaSemaine';
+
 import './styles.scss';
 
 const Critiques = () => (
   <div className="critiques">
-    <p>Bienvenue sur la page critiques</p>
+    <CritiqueDeLaSemaine />
   </div>
 );
 
