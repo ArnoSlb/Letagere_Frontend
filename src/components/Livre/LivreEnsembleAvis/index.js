@@ -10,12 +10,7 @@ import { dom } from '@fortawesome/fontawesome-svg-core'; */
 
 import Rating from 'src/components/Rating';
 import LivreAvis from 'src/components/Livre/LivreAvis';
-import LivreAvis2 from 'src/components/Livre/LivreAvis2';
-import LivreAvis3 from 'src/components/Livre/LivreAvis3';
-import LivreAvis4 from 'src/components/Livre/LivreAvis4';
-import LivreAvis5 from 'src/components/Livre/LivreAvis5';
 import LivreCritique from 'src/components/Livre/LivreCritique';
-import LivreCritique2 from 'src/components/Livre/LivreCritique2';
 
 import './styles.scss';
 
@@ -52,7 +47,7 @@ const LivreEnsembleAvis = ({ avis, critiques }) => {
                 <label htmlFor="msg" />
                 <textarea className="livreensemble__avis__position__formulaire__elements__msg__textarea" name="user_msg" id="msg" cols="42" rows="3" placeholder=" Donnez votre avis sur ce livre" />
               </div>
-              <Rating value={2} />
+              <Rating value={3} />
             </div>
             <button className="livreensemble__avis__position__formulaire__elements__msg__button" type="submit">Envoyer</button>
           </form>

@@ -15,8 +15,6 @@ function getStar(value) {
   }
 }
 
-
-
 function getStars(value) {
   const stars = [];
   const [whole] = parseFloat(value).toString().split('.');
