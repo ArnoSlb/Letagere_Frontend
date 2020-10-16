@@ -10,6 +10,7 @@ import CatalogueFilterAuthor from 'src/containers/CatalogueFilterAuthor';
 import CatalogueFilterCategory from 'src/containers/CatalogueFilterCategory';
 import CatalogueIndex from 'src/containers/CatalogueIndex';
 import Critiques from 'src/components/Critiques';
+import CritiqueForm from 'src/components/Critiques/CritiqueForm';
 import UnderConstruction from 'src/components/UnderConstruction';
 import ModalLogin from 'src/components/ModalLogin';
 import Livre from 'src/containers/Livre';
@@ -35,6 +36,9 @@ const Letagere = () => (
       </Route>
       <Route path="/critiques" exact>
         <Critiques />
+      </Route>
+      <Route path="/critiques/nouvellecritique" exact>
+        <CritiqueForm />
       </Route>
       <Route path="/offres" exact>
         <UnderConstruction />

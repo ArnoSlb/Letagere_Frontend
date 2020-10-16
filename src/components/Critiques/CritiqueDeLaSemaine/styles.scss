@@ -5,7 +5,7 @@
     height: 550px;
     border: vars.$color-blackgrey 1px solid;
     border-radius: 14px;
-    margin-bottom: vars.$gutter*2;
+    margin-bottom: vars.$gutter;
     position: relative;
 
     &__title {
@@ -18,7 +18,8 @@
         position: absolute;
         font-weight: 500;
         left: -17px;
-        top: -13px;
+        top: -15px;
+        font-size: .9em;
     }
 
     &__containers {
@@ -113,7 +114,7 @@
 
                 &__award {
                     height: 30%;
-                    width: 100.5%;
+                    width: 101%;
                     background-color: rgb(214, 0, 0);
                     transform: translateZ(25px);
                     bottom: -1px;
