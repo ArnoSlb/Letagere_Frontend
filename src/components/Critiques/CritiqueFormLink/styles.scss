@@ -1,0 +1,37 @@
+@use 'src/styles/vars';
+
+.critique-form-link {
+
+    &__container {
+        width: 40%;
+        height: 200px;
+        background-color: vars.$color-green;
+        border-radius: 14px;
+        margin-bottom: vars.$gutter;
+        display: inline-block;
+
+        &__title {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: vars.$color-white;
+            padding-top: vars.$gutter;
+            display: flex;
+            justify-content: center;
+
+            &__black {
+                color: vars.$color-blackgrey;
+                font-weight: 500;
+                padding-right: vars.$gutter*.4;
+            }
+        }
+
+        &__icon {
+            height: 70px;
+            margin: vars.$gutter*2;
+
+            
+        }
+
+    }
+    
+}
