@@ -17,7 +17,10 @@ const mapStateToProps = ({ livre }, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchBook: (bookISBN) => {
     // console.log('containers livre', bookISBN);
-
+    dispatch(fetchBook(bookISBN));
+  },
+  sendMessage: (bookISBN) => {
+    // console.log('containers livre', bookISBN);
     dispatch(fetchBook(bookISBN));
   },
 });

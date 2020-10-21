@@ -10,7 +10,7 @@ const livre = (store) => (next) => (action) => {
         .then((response) => {
           const bookToDispatch = saveBook(response.data);
           store.dispatch(bookToDispatch);
-          console.log('livre middleware ', response);
+          // console.log('livre middleware ', response);
         })
         .catch((error) => console.log('livre middleware', error));
       // console.log('middleware', action.authorId);
@@ -21,7 +21,7 @@ const livre = (store) => (next) => (action) => {
         .then((response) => {
           const bookAuthorToDispatch = saveBookAuthor(response.data);
           store.dispatch(bookAuthorToDispatch);
-          console.log('livre middleware auteur', response);
+          // console.log('livre middleware auteur', response);
         })
         .catch((error) => console.log('livre middleware auteur', error));
       // console.log('middleware', action.authorId);
@@ -32,7 +32,7 @@ const livre = (store) => (next) => (action) => {
         .then((response) => {
           const bookInterestToDispatch = saveBookInterest(response.data);
           store.dispatch(bookInterestToDispatch);
-          console.log('livre middleware interet', response);
+          // console.log('livre middleware interet', response);
         })
         .catch((error) => console.log('livre middleware interet', error));
       // console.log('middleware', action.authorId);

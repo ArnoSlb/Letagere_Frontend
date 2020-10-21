@@ -14,11 +14,11 @@ const LivreInteret = ({ livre, fetchBookInterest, livreInteret, loadingInteret }
     fetchBookInterest(categoryId);
   }, []);
 
-  console.log('LivreInteret', livreInteret);
-  console.log('loadingInteret', loadingInteret);
+  // console.log('LivreInteret', livreInteret);
+  // console.log('loadingInteret', loadingInteret);
   if (loadingInteret === false) {
     const livreInteretListe = livreInteret.books;
-    console.log('livreInteretListe', livreInteretListe);
+    // console.log('livreInteretListe', livreInteretListe);
     var dataInteret = livreInteretListe.length ? (
       livreInteretListe.map((livre) => (
         <BookCard livre={livre} key={livre.id} />

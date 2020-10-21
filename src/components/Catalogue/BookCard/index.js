@@ -24,10 +24,10 @@ const BookCard = ({ livre }) => {
             <img className="bookcard__infos__cover" src={livre.cover} alt="" />
           </a>
           <div className="bookcard__icons">
-            <Link>
+            <Link to="">
               <img className="bookcard__icons__heart" src={Heart} alt="" />
             </Link>
-            <Link>
+            <Link to="">
               <img className="bookcard__icons__plus" src={Plus} alt="" />
             </Link>
           </div>
