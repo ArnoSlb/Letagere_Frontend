@@ -15,7 +15,9 @@ const Livre = ({
   slug,
   fetchBook,
   loading, 
-  sendMessage
+  sendMessage,
+  inputValue,
+  setNewMessageContent,
 }) => {
   // console.log('composant livre', livre);
 
@@ -62,6 +64,8 @@ const Livre = ({
                 critiques={reviews}
                 sendMessage={sendMessage}
                 slug={slug}
+                inputValue={inputValue}
+                setNewMessageContent={setNewMessageContent}
               />
             </div>
             <div className="livre__colonnedroite__critiques" />

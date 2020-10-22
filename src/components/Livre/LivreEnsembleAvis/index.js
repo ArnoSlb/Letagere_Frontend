@@ -12,8 +12,10 @@ import LivreCritique from 'src/components/Livre/LivreCritique';
 
 import './styles.scss';
 
-const LivreEnsembleAvis = ({ avis, critiques, sendMessage, slug }) => {
-  // console.log('ensemble critiques', critiques);
+const LivreEnsembleAvis = ({
+  avis, critiques, sendMessage, slug, inputValue, setNewMessageContent,
+}) => {
+  // console.log('ensemble critiques', inputValue);
 
   const livreEnsembleAvis = avis.length ? (
     avis.map((avi) => (
@@ -37,6 +39,11 @@ const LivreEnsembleAvis = ({ avis, critiques, sendMessage, slug }) => {
     sendMessage(slug);
   };
 
+  const handleOnChange = (event) => {
+    console.log('je passe dans handleOnChange', event.target.value);
+    setNewMessageContent(event.target.value);
+  };
+
   return (
     <div className="livreensemble">
       <div className="livreensemble__avis">
@@ -50,7 +57,15 @@ const LivreEnsembleAvis = ({ avis, critiques, sendMessage, slug }) => {
               <div className="livreensemble__avis__position__formulaire__elements">
                 <div className="livreensemble__avis__position__formulaire__elements__msg">
                   {/* <label htmlFor="msg" /> */}
-                  <input type="text" className="livreensemble__avis__position__formulaire__elements__msg__textarea" name="user_msg" id="msg" cols="42" rows="3" placeholder=" Donnez votre avis sur ce livre" />
+                  <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleOnChange}
+                    className="livreensemble__avis__position__formulaire__elements__msg__textarea"
+                    name="user_msg"
+                    id="msg"
+                    placeholder=" Donnez votre avis sur ce livre"
+                  />
                 </div>
                 <div className="livreensemble__avis__position__formulaire__elements__note">
                   <Rating value={3} />
@@ -87,6 +102,8 @@ LivreEnsembleAvis.propTypes = {
   critiques: PropTypes.array.isRequired,
   sendMessage: PropTypes.func.isRequired,
   slug: PropTypes.number.isRequired,
+  inputValue: PropTypes.string.isRequired,
+  setNewMessageContent: PropTypes.func.isRequired,
 };
 
 export default LivreEnsembleAvis;
