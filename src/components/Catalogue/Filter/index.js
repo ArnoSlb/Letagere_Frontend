@@ -10,8 +10,8 @@ const Filter = ({
   const authorsList = authors.length ? (
     authors.map((author) => (
       // <li onClick={() => fetchAuthor(author.id)}>{author.name}</li>
-      <li>
-        <a href={`/catalogue/auteur/${author.id}/1` }>{author.name}</a>
+      <li key={author.id}>
+        <a href={`/catalogue/auteur/${author.id}/1`}>{author.name}</a>
       </li>
     ))
   ) : (
@@ -21,8 +21,8 @@ const Filter = ({
   const categoriesArray = categories.categories;
   const categoriesList = categoriesArray.length ? (
     categoriesArray.map((category) => (
-      <li>
-        <a href={`/catalogue/categorie/${category.id}/1` }>{category.name}</a>
+      <li key={category.id}>
+        <a href={`/catalogue/categorie/${category.id}/1`}>{category.name}</a>
       </li>
     ))
   ) : (

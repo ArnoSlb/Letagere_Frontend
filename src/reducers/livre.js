@@ -1,4 +1,4 @@
-import { SAVE_BOOK } from 'src/actions/livre';
+import { SAVE_BOOK, SET_NEW_MESSAGE_CONTENT } from 'src/actions/livre';
 import { SAVE_BOOK_AUTHOR } from 'src/actions/livreAuteur';
 import { SAVE_BOOK_INTEREST } from 'src/actions/livreInteret';
 
@@ -7,6 +7,7 @@ const initialState = {
   loading: true,
   livreAuteur: [],
   loadingAuteur: true,
+  newMessageContent: '',
 };
 
 const livre = (state = initialState, action = {}) => {
@@ -28,6 +29,11 @@ const livre = (state = initialState, action = {}) => {
         ...state,
         livreInteret: action.bookInterest,
         loadingInteret: false,
+      };
+    case SET_NEW_MESSAGE_CONTENT:
+      return {
+        ...state,
+        newMessageContent: action.message,
       };
     default:
       return state;

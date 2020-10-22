@@ -14,7 +14,7 @@ const AddTo = new AddToLibrary();
 const LivrePresentation = ({ livre }) => {
   // console.log('LivrePresentation', livre);
   const authorsList = livre.authors;
-  console.log(authorsList);
+  // console.log(authorsList);
   const authors = authorsList.length ? (
     authorsList.map((authorBook) => (
       <span className="livrePresentation__infos__details__ADECR__AD__authors__name">{authorBook.authorId.name}</span>
@@ -22,7 +22,7 @@ const LivrePresentation = ({ livre }) => {
   ) : (
     <p>Auteur inconnu</p>
   );
-  console.log(authors);
+  // console.log(authors);
 
   const categoriesList = livre.categories;
   const category = categoriesList.length ? (
@@ -32,7 +32,7 @@ const LivrePresentation = ({ livre }) => {
   ) : (
     <p>ND</p>
   );
-  console.log(category);
+  // console.log(category);
 
   return (
     <div className="livrePresentation">

@@ -109,6 +109,6 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
     </div>
   );
 };
-// console.log(catalogue);
+
 
 export default CatalogueShelves;

@@ -7,7 +7,7 @@ import rating from 'src/assets/images/Groupe 33.png';
 import './styles.scss';
 
 const LivreCritique = ({ critique }) => {
-  console.log('Livre critique', critique);
+  // console.log('Livre critique', critique);
   return (
     <div className="livrecritique">
     <div className="livrecritique__user">

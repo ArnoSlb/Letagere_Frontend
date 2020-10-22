@@ -11,7 +11,13 @@ import AddMessage from 'src/components/AddTo/AddMessage';
 import './styles.scss';
 
 const Livre = ({
-  livre, slug, fetchBook, loading,
+  livre,
+  slug,
+  fetchBook,
+  loading, 
+  sendMessage,
+  inputValue,
+  setNewMessageContent,
 }) => {
   // console.log('composant livre', livre);
 
@@ -53,7 +59,14 @@ const Livre = ({
           </div>
           <div className="livre__colonnedroite">
             <div className="livre__colonnedroite__avis">
-              <LivreEnsembleAvis avis={advices} critiques={reviews} />
+              <LivreEnsembleAvis
+                avis={advices}
+                critiques={reviews}
+                sendMessage={sendMessage}
+                slug={slug}
+                inputValue={inputValue}
+                setNewMessageContent={setNewMessageContent}
+              />
             </div>
             <div className="livre__colonnedroite__critiques" />
           </div>

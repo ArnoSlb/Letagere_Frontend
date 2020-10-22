@@ -28,10 +28,10 @@ const BookShelf = ({ livre }) => {
         <span className="bookshelf__infos__author">{firstAuthor}</span>
       </div>
       <div className="bookshelf__icons">
-        <Link>
+        <Link to="">
           <img className="bookshelf__icons__heart" src={Heart} alt="" onClick={AddToW.handleOnClick} id={livre.ISBN}  />
         </Link>
-        <Link>
+        <Link to="">
           <img className="bookshelf__icons__plus" src={Plus} alt="" onClick={AddTo.handleOnClick} id={livre.ISBN} />
         </Link>
       </div>
