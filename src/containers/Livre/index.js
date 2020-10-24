@@ -3,7 +3,6 @@ import Livre from 'src/components/Livre';
 import { fetchBook, addMessage, setMessage } from 'src/actions/livre';
 
 const mapStateToProps = ({ livre }, ownProps) => {
-  // console.log(livre);
   return ({
     // je veux récupérer la recette qui contient le titre "slugifié"
     // qui correspond au param "slug".
@@ -25,12 +24,10 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(fetchBook(bookISBN));
   },
   sendMessage: (bookISBN) => {
-    // console.log('containers livre', bookISBN);
     dispatch(addMessage());
-    dispatch(fetchBook(bookISBN));
+    // dispatch(fetchBook(bookISBN));
   },
   setNewMessageContent: (message) => {
-    console.log('je passe dans setNewMessageContent', message);
     dispatch(setMessage(message));
   },
 });

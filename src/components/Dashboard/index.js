@@ -22,7 +22,7 @@ const Auth = new AuthService();
 let Profile = 'Se connecter';
 { Auth.loggedIn() ? Profile = Auth.getProfile() : Profile = 'Se connecter'; }
 
-// console.log(Profile);
+console.log(Profile);
 
 const Dashboard = () => (
   <div className="dashboard">
