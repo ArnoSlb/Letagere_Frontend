@@ -6,7 +6,7 @@ import rating from 'src/assets/images/Groupe 33.png';
 import './styles.scss';
 
 const LivreAvis = ({ avi }) => {
-  console.log('avi', avi);
+  // console.log('avi', avi);
 
   return (
     <div className="livreavis">

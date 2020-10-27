@@ -29,11 +29,12 @@ function handleRating(event, value) {
 }
 export default function Rating({ value, i }) {
   const ratingValue = i + 1;
+  console.log(getStars(value));
   return (
     <div className="rating__books-container">
       {getStars(value).map((value) => (
         <label>
-          <input className="rating__input" type="radio" name="rating" value={ratingValue} />
+          <input className="rating__input" type="radio" name="rating" value="" />
           <img src={getStar(value)} id="0" className="rating__books first_rate" alt="" onClick={handleRating} />
         </label>
       ))}

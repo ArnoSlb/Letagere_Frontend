@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 
 /* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { dom } from '@fortawesome/fontawesome-svg-core'; */
 
+import AuthService from 'src/components/ModalLogin/Auth/AuthService';
 import Rating from 'src/components/Rating';
 import LivreAvis from 'src/components/Livre/LivreAvis';
 import LivreCritique from 'src/components/Livre/LivreCritique';
@@ -15,11 +16,11 @@ import './styles.scss';
 const LivreEnsembleAvis = ({
   avis, critiques, sendMessage, slug, inputValue, setNewMessageContent,
 }) => {
-  // console.log('ensemble critiques', inputValue);
+  // console.log('ensemble critiques', critiques);
 
   const livreEnsembleAvis = avis.length ? (
     avis.map((avi) => (
-      <LivreAvis avi={avi} />
+      <LivreAvis avi={avi} key={avi.text} />
     ))
   ) : (
     <p>Devenez le premier à donner votre avis ! </p>
@@ -27,22 +28,34 @@ const LivreEnsembleAvis = ({
 
   const livreEnsembleCritiques = critiques.length ? (
     critiques.map((critique) => (
-      <LivreCritique critique={critique} />
+      <LivreCritique critique={critique} key={critique.body} />
     ))
   ) : (
     <p>Devenez le premier à rediger une critique ! </p>
   );
 
+  const Auth = new AuthService();
+  let Profile = 'Se connecter';
+  { Auth.loggedIn() ? Profile = Auth.getProfile() : Profile = 'Se connecter'; }
+
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log('handleOnSubmit');
-    sendMessage(slug);
+    if (Auth.loggedIn()) {
+      console.log('connecté');
+      sendMessage(inputValue);
+    }
+    else {
+      console.log('pas connecté');
+      <Redirect push to="/connexion" />;
+      alert(`Vous devez être connecté pour poster un commentaire`);
+    }
   };
 
   const handleOnChange = (event) => {
-    console.log('je passe dans handleOnChange', event.target.value);
     setNewMessageContent(event.target.value);
   };
+
+  // console.log(Profile);
 
   return (
     <div className="livreensemble">
@@ -53,10 +66,9 @@ const LivreEnsembleAvis = ({
             {livreEnsembleAvis}
           </div>
           <div className="livreensemble__avis__position__formulaire">
-            <form action="" method="post" onSubmit={handleOnSubmit}>
+            <form onSubmit={handleOnSubmit}>
               <div className="livreensemble__avis__position__formulaire__elements">
                 <div className="livreensemble__avis__position__formulaire__elements__msg">
-                  {/* <label htmlFor="msg" /> */}
                   <input
                     type="text"
                     value={inputValue}
@@ -101,9 +113,9 @@ LivreEnsembleAvis.propTypes = {
   avis: PropTypes.array.isRequired,
   critiques: PropTypes.array.isRequired,
   sendMessage: PropTypes.func.isRequired,
-  slug: PropTypes.number.isRequired,
+  slug: PropTypes.string.isRequired,
   inputValue: PropTypes.string.isRequired,
   setNewMessageContent: PropTypes.func.isRequired,
 };
 
-export default LivreEnsembleAvis;
+export default withRouter(LivreEnsembleAvis);

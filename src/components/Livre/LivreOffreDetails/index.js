@@ -1,7 +1,6 @@
 import React from 'react';
 import plus from 'src/assets/images/plus-5-xxl.png';
 import heart from 'src/assets/images/heart-xxl.png';
-import wd from 'src/assets/images/the-walking-dead-1_c4919f8289.jpg';
 import rating from 'src/assets/images/Groupe 33.png';
 import profilepic from 'src/assets/images/Rectangle -2.png';
 
@@ -40,23 +39,6 @@ const LivreOffreDetails = ({ livre }) => {
     </div>
   );
 
-};
-
-LivreOffreDetails.propTypes = {
-  slug: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      ISBN: PropTypes.string.isRequired,
-      titre: PropTypes.string.isRequired,
-      auteur: PropTypes.string.isRequired,
-      dateDeParution: PropTypes.string.isRequired,
-      editeur: PropTypes.string.isRequired,
-      collection: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-      resume: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
 };
 
 export default LivreOffreDetails;

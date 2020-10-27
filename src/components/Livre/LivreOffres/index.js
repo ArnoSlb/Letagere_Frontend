@@ -27,20 +27,7 @@ const LivreOffres = ({ livre }) => (
 );
 
 LivreOffreDetails.propTypes = {
-  slug: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      ISBN: PropTypes.string.isRequired,
-      titre: PropTypes.string.isRequired,
-      auteur: PropTypes.string.isRequired,
-      dateDeParution: PropTypes.string.isRequired,
-      editeur: PropTypes.string.isRequired,
-      collection: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired,
-      resume: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
+  livre: PropTypes.object.isRequired,
 };
 
 export default LivreOffres;
