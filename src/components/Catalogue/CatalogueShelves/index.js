@@ -47,7 +47,7 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
   else {
     shelvesNumber = catalogue.books.length / booksByShelf;
   }
-  const shelves = catalogue.books.slice(0, shelvesNumber).map((shelf) => <Shelf />);
+  const shelves = catalogue.books.slice(0, shelvesNumber).map((shelf) => <Shelf key={shelf.id} />);
   // Avec shelves je boucle sur le tableau que je recois de l'API
   // je limite le nombre de boucle avec slice pour ne pas boucler 36 fois (nmbre d'items dans le tableau)
   // je rends dynamique le nmbre limite avec shelvesNumber

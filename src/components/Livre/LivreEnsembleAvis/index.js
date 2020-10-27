@@ -16,11 +16,11 @@ import './styles.scss';
 const LivreEnsembleAvis = ({
   avis, critiques, sendMessage, slug, inputValue, setNewMessageContent,
 }) => {
-  // console.log('ensemble critiques', props.history);
+  // console.log('ensemble critiques', critiques);
 
   const livreEnsembleAvis = avis.length ? (
     avis.map((avi) => (
-      <LivreAvis avi={avi} />
+      <LivreAvis avi={avi} key={avi.text} />
     ))
   ) : (
     <p>Devenez le premier à donner votre avis ! </p>
@@ -28,7 +28,7 @@ const LivreEnsembleAvis = ({
 
   const livreEnsembleCritiques = critiques.length ? (
     critiques.map((critique) => (
-      <LivreCritique critique={critique} />
+      <LivreCritique critique={critique} key={critique.body} />
     ))
   ) : (
     <p>Devenez le premier à rediger une critique ! </p>
@@ -42,7 +42,6 @@ const LivreEnsembleAvis = ({
     event.preventDefault();
     if (Auth.loggedIn()) {
       console.log('connecté');
-      alert(`Votre commentaire : "${inputValue}" a été publié`);
       sendMessage(inputValue);
     }
     else {
@@ -114,7 +113,7 @@ LivreEnsembleAvis.propTypes = {
   avis: PropTypes.array.isRequired,
   critiques: PropTypes.array.isRequired,
   sendMessage: PropTypes.func.isRequired,
-  slug: PropTypes.number.isRequired,
+  slug: PropTypes.string.isRequired,
   inputValue: PropTypes.string.isRequired,
   setNewMessageContent: PropTypes.func.isRequired,
 };

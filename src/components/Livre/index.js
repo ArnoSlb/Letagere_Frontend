@@ -19,7 +19,7 @@ const Livre = ({
   inputValue,
   setNewMessageContent,
 }) => {
-  // console.log('composant livre', livre);
+  // console.log('composant livre', window.localStorage);
 
   // au 1e rendu du composant je veux charger les données du catalogue
   // je passe par useEffect et donne bien en 2e argument un tableau vide

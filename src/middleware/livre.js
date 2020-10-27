@@ -39,9 +39,22 @@ const livre = (store) => (next) => (action) => {
       break;
     }
     case ADD_MESSAGE: {
-      axios.post('http://3.91.26.197/projet-book-back/API/advice/add')
+      // console.log(localStorage.getItem('id_token'));
+      const config = {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('id_token')}`,
+        },
+        body: JSON.stringify({
+          ISBN: JSON.parse(9782809493474),
+          text: 'coucou',
+          rating: 3,
+        }),
+      };
+      axios.post('http://3.91.26.197/projet-book-back/API/advice/add',
+        config)
         .then((response) => {
           console.log(response);
+          alert(`Votre commentaire : "${inputValue}" a été publié`);
         })
         .catch((error) => console.log('livre middleware add message', error));
       break;

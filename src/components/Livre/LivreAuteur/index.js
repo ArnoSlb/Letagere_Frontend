@@ -21,7 +21,7 @@ const LivreAuteur = ({ livre, fetchBookAuthor, livreAuteur, loadingAuteur }) => 
     // console.log('livreAuteurListe', livreAuteurListe);
     var dataAuteur = livreAuteurListe.length ? (
       livreAuteurListe.map((livre) => (
-        <BookCard livre={livre} key={livre.id} />
+        <BookCard livre={livre} key={livre.ISBN} />
       ))
     ) : (
       <p>Aucun livre du même auteur</p>

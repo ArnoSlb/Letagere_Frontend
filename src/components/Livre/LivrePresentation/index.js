@@ -17,7 +17,7 @@ const LivrePresentation = ({ livre }) => {
   // console.log(authorsList);
   const authors = authorsList.length ? (
     authorsList.map((authorBook) => (
-      <span className="livrePresentation__infos__details__ADECR__AD__authors__name">{authorBook.authorId.name}</span>
+      <span key={authorBook.authorId.id} className="livrePresentation__infos__details__ADECR__AD__authors__name">{authorBook.authorId.name} </span>
     ))
   ) : (
     <p>Auteur inconnu</p>
@@ -27,7 +27,7 @@ const LivrePresentation = ({ livre }) => {
   const categoriesList = livre.categories;
   const category = categoriesList.length ? (
     categoriesList.map((categorie) => (
-      <span className="livrePresentation__infos__details__ADECR__AD__category">{categorie.categoryId.name}</span>
+      <span key={categorie.categoryId.id} className="livrePresentation__infos__details__ADECR__AD__category">{categorie.categoryId.name} </span>
     ))
   ) : (
     <p>ND</p>
@@ -67,7 +67,7 @@ const LivrePresentation = ({ livre }) => {
               </div>
             </div>
             <div className="livrePresentation__infos__details__ADECR__I">
-              <Link>
+              <Link to="">
                 <div onClick={AddTo.handleOnClick} id={livre.ISBN}>Ajouter à mes livres</div>
               </Link>
               <Link to="/connexion">
