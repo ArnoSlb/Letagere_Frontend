@@ -2,9 +2,9 @@
 
 .critique-presse {
     width: 55%;
-    height: 200px;
     border: vars.$color-blackgrey 1px solid;
     border-radius: 14px;
+    background-color: white;
 
     &__titre {
             text-transform: uppercase;
@@ -12,11 +12,17 @@
             padding-top: vars.$gutter;
             display: flex;
             justify-content: center;
+            color: vars.$color-green;
+            font-weight: bold;
     }
 
     &__liste {
 
         padding: 0 vars.$gutter;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
 
         &__logo {
             width: 50px;
