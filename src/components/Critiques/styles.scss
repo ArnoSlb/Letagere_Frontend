@@ -6,5 +6,11 @@
     max-width: 1500px;
     margin: 0 auto;
     text-align: center;
+
+    &__form-et-presse {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: vars.$gutter*2;
+    }
   }
   
