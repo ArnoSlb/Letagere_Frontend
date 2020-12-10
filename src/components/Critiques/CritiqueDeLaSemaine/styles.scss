@@ -252,3 +252,60 @@
         }
     }
 }
+
+@media screen and (max-width:1280px) {
+
+  .critiquedelasemaine {
+    height: 1200px;
+  }
+
+  .critique-form-link {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  .critique-form-link__container__title {
+      flex-direction: column;
+  }
+
+  .critiquedelasemaine__containers {
+    flex-direction: column;
+  }
+
+  .critiquedelasemaine__containers__black {
+    width: 100%;
+    border-radius: 0 13px 0 0;
+    height: 500px;
+    
+  }
+
+  .critiquedelasemaine__containers__black__user {
+    margin-top: 20px;
+    padding-bottom: 30px;
+
+  }
+
+  .critiquedelasemaine__containers__black__user__picture {
+    margin-right: 0;
+  }
+
+  .critiquedelasemaine__containers__black__user__infos {
+    margin: 0;
+  }
+
+  .critiquedelasemaine__containers__white {
+    width: 100%;
+  }
+
+  .critiquedelasemaine__containers__white__critical-container {
+    height: 540px;
+  }
+
+  .critiquedelasemaine__containers__white__title-and-rate {
+    flex-direction: column-reverse;
+    padding-left: 0;
+    
+  }
+
+
+}

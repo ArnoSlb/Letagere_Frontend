@@ -19,13 +19,18 @@
     position: absolute;
     top: 640px;
     margin-left: vars.$gutter*2;
+    max-width: 90%;
+    width: 85%;
   }
 }
 
 @media screen and (max-width:768px) {
   .bookshelflist {
-    margin-top: 0;
-    overflow-y: scroll;
-    height: 4480px;
+    margin: 0 3%;
+    height: 200px;
+  }
+
+  .bookshelf {
+    margin-bottom: 150px;
   }
 }
