@@ -59,9 +59,17 @@
 
 @media screen and (max-width:768px) {
   .catalogueshelves {
+    height: 0px;
     p {
       text-align: center;
     }
+
   
+  }
+
+  .catalogue__countitems {
+    position: absolute;
+    top: 600px;
+    left: calc(50%-140px);
   }
 }
