@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom';
 import AddToLibrary from 'src/components/AddTo/AddToLibrary';
 import AddToWish from 'src/components/AddTo/AddToWish';
 
-import firstCover from 'src/assets/images/uneviechoisie.jpg';
 import Heart from 'src/assets/images/heart-xxl.png';
 import Plus from 'src/assets/images/plus-5-xxl.png';
 import GreenBook from 'src/assets/images/book-xxl green.png';
 import GreyBook from 'src/assets/images/book-xxl grey.png';
 import Feather from 'src/assets/images/feather-xxl.png';
-import Vinci from 'src/assets/images/Leonard-de-Vinci-La-biographie.jpg';
 import Sophie from 'src/assets/images/Rectangle -29.png';
 
 import './styles.scss';
@@ -47,12 +45,12 @@ const TopOfWeek = ({ heart }) => {
             </div>
           </div>
           <div className="topofweek__icons">
-            <Link to="">
+            <a>
               <img className="topofweek__icon" src={Plus} alt="" onClick={AddToW.handleOnClick} id={heartBook.ISBN} />
-            </Link>
-            <Link to="">
+            </a>
+            <a>
               <img className="topofweek__icon" src={Heart} alt="" onClick={AddTo.handleOnClick} id={heartBook.ISBN} />
-            </Link>
+            </a>
           </div>
         </div>
       );

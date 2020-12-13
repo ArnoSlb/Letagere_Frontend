@@ -67,10 +67,10 @@ const LivrePresentation = ({ livre }) => {
               </div>
             </div>
             <div className="livrePresentation__infos__details__ADECR__I">
-              <Link to="">
-                <div onClick={AddTo.handleOnClick} id={livre.ISBN}>Ajouter à mes livres</div>
-              </Link>
-              <Link to="/connexion">
+                <a>
+                  <div onClick={AddTo.handleOnClick} id={livre.ISBN}>Ajouter à mes livres</div>
+                </a>
+              <Link to="/critiques">
                 <div>Écrire une critique</div>
               </Link>
               <Link to="/connexion">

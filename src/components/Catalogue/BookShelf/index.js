@@ -19,7 +19,7 @@ const BookShelf = ({ livre }) => {
   const AddToW = new AddToWish();
 
   return (
-    <div className="bookshelf" >
+    <div className="bookshelf">
       <div className="bookshelf__infos">
         <a href={lien} className="bookshelf__link">
           <img className="bookshelf__infos__cover" src={livre.cover} alt="" />
@@ -28,12 +28,8 @@ const BookShelf = ({ livre }) => {
         <span className="bookshelf__infos__author">{firstAuthor}</span>
       </div>
       <div className="bookshelf__icons">
-        <Link to="">
-          <img className="bookshelf__icons__heart" src={Heart} alt="" onClick={AddToW.handleOnClick} id={livre.ISBN}  />
-        </Link>
-        <Link to="">
-          <img className="bookshelf__icons__plus" src={Plus} alt="" onClick={AddTo.handleOnClick} id={livre.ISBN} />
-        </Link>
+        <a><img className="bookshelf__icons__heart" src={Heart} alt="" onClick={AddToW.handleOnClick} id={livre.ISBN} /></a>
+        <a><img className="bookshelf__icons__plus" src={Plus} alt="" onClick={AddTo.handleOnClick} id={livre.ISBN} /></a>
       </div>
     </div>
   );

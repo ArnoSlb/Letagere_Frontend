@@ -1,4 +1,5 @@
 import React from 'react';
+
 import plus from 'src/assets/images/plus-5-xxl.png';
 import heart from 'src/assets/images/heart-xxl.png';
 import wd from 'src/assets/images/Batman.jpg';

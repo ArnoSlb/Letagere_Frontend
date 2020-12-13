@@ -8,8 +8,8 @@ import profilepic from 'src/assets/images/Rectangle -3.png';
 const BookOffer = () => (
   <div className="bookoffer">
     <div className="bookoffer__icons">
-      <a href="#"><img src={plus} alt="" /> </a>
-      <a href="#"><img src={heart} alt="" /> </a>
+      <img src={plus} alt="" />
+      <img src={heart} alt="" /> 
     </div>
     <a href="#"><img className="bookoffer__book" src={wd} alt="" /></a>
     <div className="bookoffer__infos">

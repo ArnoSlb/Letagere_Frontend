@@ -38,19 +38,19 @@ const Dashboard = () => (
           <div className="dashboard__numbers">
             <div className="dashboard__number-container">
               <p className="dashboard__number-element">Livres Lu</p>
-              <p className="dashboard__number">27</p>
+              <p className="dashboard__number">0</p>
             </div>
             <div className="dashboard__number-container">
               <p className="dashboard__number-element">Mes Livres</p>
-              <p className="dashboard__number">36</p>
+              <p className="dashboard__number">0</p>
             </div>
             <div className="dashboard__number-container">
               <p className="dashboard__number-element">Critiques</p>
-              <p className="dashboard__number">23</p>
+              <p className="dashboard__number">0</p>
             </div>
             <div className="dashboard__number-container">
               <p className="dashboard__number-element">Offres en cours</p>
-              <p className="dashboard__number">7</p>
+              <p className="dashboard__number">0</p>
             </div>
           </div>
         </div>

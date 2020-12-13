@@ -7,10 +7,10 @@
   display: flex;
   width: 80%;
   justify-content: space-evenly;
-  margin: 75px auto;
+  margin: 0 auto;
   position: absolute;
   left: 10%;
-  top: 5%;
+  top: calc(50vh - 250px);
  }
   .cardid {
     background-color: white;
