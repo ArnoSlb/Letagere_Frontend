@@ -24,18 +24,17 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
     widthBookShelfList = 1100;
   }
   // widthBookByShelfList est égale à 72% de la largeur du viewport moins 250px(largeur du filtre)
-  // console.log(widthBookShelfList);
 
   const booksByShelf = Math.floor(widthBookShelfList / 171.76);
   // booksByshlef est égale à la largeur de widthBookShelfList divisé par la largeur d'un item
-  // on obtient le nmbre d'items qui peuvent teznir sur cette largeur
-  // que l'on arrondis au chiffres intérieur entier le plus proche
+  // on obtient le nmbre d'items qui peuvent tenir sur cette largeur
+  // que l'on arrondis au chiffres inférieur entier le plus proche
 
   let shelvesNumber = 0;
 
   if (catalogue.books.length <= booksByShelf) {
     shelvesNumber = 1;
-    // si le nombre de livre du catalogue est inférieur ou égale au nmbre de livre
+    // si le nombre de livre du catalogue est inférieur ou égale au nmbre de livre par étagère
     // autorisé par étagere alors le nombre d'etagere est de 1
   }
   else if (catalogue.books.length % booksByShelf >= 1) {
@@ -43,7 +42,7 @@ const CatalogueShelves = ({ catalogue, fetchCatalogueIndex }) => {
   }
   // si le modulo du nmbre de livre dans le catalogue par le nombre autorisé par étagere
   // est supérieur ou égale 1 alors je rajoute une étagere
-  // ex: 38 modulo 5 = 3 car 7x5=35 il me reste donc 3 livres => je rajoute une étagere en plus
+  // ex: 39 modulo 5 = 4 car 7x5=35 il me reste donc 4 livres => je rajoute une étagere en plus
   else {
     shelvesNumber = catalogue.books.length / booksByShelf;
   }

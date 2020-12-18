@@ -16,7 +16,7 @@ const CritiquePresse = () => (
       <a href="https://www.lepoint.fr/livres/"><img src="https://www.lepoint.fr/images/commun/logos/le_point.fr.png" alt="Logo Le Point" target="_blank" className="critique-presse__liste__logo" /></a>
       <a href="https://www.lexpress.fr/culture/livre/"><img src="https://store-images.s-microsoft.com/image/apps.58885.13510798887567244.144fe74a-7d2c-4d3f-9818-d64809bed343.508f4edb-d60e-4220-a743-0d954086eba6?mode=scale&q=90&h=270&w=270&background=%230078D7" alt="logo de l'express" target="_blank" className="critique-presse__liste__logo" /></a>
       <a href="https://www.lesinrocks.com/livres/"><img src="https://www.babelio.com/users/1012051_5131.jpg" alt="logo des inrockuptibles" target="_blank" className="critique-presse__liste__logo" /></a>
-      <a href="https://actualitte.com/"><img src="https://actualitte.com/styles/gfx/logo-actualitte.png" alt="logo de actualitte" target="_blank" className="critique-presse__liste__logo" /></a>
+      <a href="https://actualitte.com/"><img src="https://actualitte.com/img/logo_baseline.svg" alt="logo de actualitte" target="_blank" className="critique-presse__liste__logo" /></a>
       <a href="https://www.elle.fr/Loisirs/Livres"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/elle-2-logo.png" alt="logo elle" target="_blank" className="critique-presse__liste__logo" /></a>
       <a href="http://www.auracan.com/"><img src="https://www.babelio.com/users/29513_2159.jpeg" alt="Logo d'Auracan" target="_blank" className="critique-presse__liste__logo" /></a>
       <a href="https://www.bdgest.com/"><img src="https://pbs.twimg.com/profile_images/698052717588148226/YcV4BCLV.png" alt="Logo de bdgest" target="_blank" className="critique-presse__liste__logo" /></a>

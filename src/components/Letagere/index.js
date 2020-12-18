@@ -58,6 +58,9 @@ const Letagere = () => (
       <Route path="/cookies" exact>
         <UnderConstruction />
       </Route>
+      <Route path="/mentionslegales" exact>
+        <UnderConstruction />
+      </Route>
       <Route path="/catalogue" exact>
         <Catalogue />
       </Route>
